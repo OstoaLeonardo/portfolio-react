@@ -1,0 +1,128 @@
+.widget {
+    --sun-color: #fef08a;
+    --sun-color-rgba: rgb(255, 230, 92);
+    --card-sunny: #ffa333;
+    --moon-night: #2f3475;
+    --moon-color: #fff199;
+    --moon-wave: rgb(79, 85, 148);
+}
+
+.sunny-day .sun {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 100%;
+    position: absolute;
+    top: -4rem;
+    right: -2.8rem;
+    background-color: var(--sun-color);
+    animation: sun 4s infinite;
+    animation: sun-rays 4s infinite;
+}
+
+.moon-night .moon {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 100%;
+    position: absolute;
+    top: 2rem;
+    right: 1.5rem;
+    background-color: var(--moon-color);
+    animation: moon-rays 4s infinite;
+}
+
+@keyframes sun-rays {
+    0%,
+    100% {
+        box-shadow:
+            0 0 1rem rgba(255, 255, 255, 0.4),
+            0 0 0 2.5rem rgb(255, 255, 255, 0.3),
+            0 0 0 4.5rem rgb(255, 255, 255, 0.2),
+            0 0 0 6.5rem rgb(255, 255, 255, 0.1);
+    }
+
+    50% {
+        box-shadow:
+            0 0 .8rem rgba(255, 255, 255, 0.4),
+            0 0 0 3.5rem rgb(255, 255, 255, 0.3),
+            0 0 0 6rem rgb(255, 255, 255, 0.2),
+            0 0 0 8.5rem rgb(255, 255, 255, 0.1);
+    }
+}
+
+@keyframes moon-rays {
+    0%,
+    100% {
+        box-shadow:
+            0 0 1rem rgb(79, 85, 148, 1),
+            0 0 0 2rem rgb(79, 85, 148, 0.8),
+            0 0 4rem rgb(79, 85, 148, 0.6),
+            0 0 0 6rem rgb(79, 85, 148, 0.4),
+            0 0 8rem rgb(79, 85, 148, 0.2);
+    }
+
+    50% {
+        box-shadow:
+            0 0 1rem rgb(79, 85, 148, 1),
+            0 0 0 3rem rgb(79, 85, 148, 0.8),
+            0 0 5rem rgb(79, 85, 148, 0.6),
+            0 0 0 7rem rgb(79, 85, 148, 0.4),
+            0 0 9rem rgb(79, 85, 148, 0.2);
+    }
+}
+
+/* Cambiar tamaño en dispositivos moviles */
+@media (max-width: 768px) {
+    .sunny-day .sun {
+        width: 2rem;
+        height: 2rem;
+        top: -0.5rem;
+        right: -0.5rem;
+    }
+
+    .moon-night .moon {
+        width: 2rem;
+        height: 2rem;
+        top: 1rem;
+        right: 1rem;
+    }
+
+    @keyframes sun-rays {
+        0%,
+        100% {
+            box-shadow:
+                0 0 0.5rem rgba(255, 255, 255, 0.4),
+                0 0 0 1.25rem rgb(255, 255, 255, 0.3),
+                0 0 0 2.25rem rgb(255, 255, 255, 0.2),
+                0 0 0 3.25rem rgb(255, 255, 255, 0.1);
+        }
+
+        50% {
+            box-shadow:
+                0 0 0.4rem rgba(255, 255, 255, 0.4),
+                0 0 0 1.6rem rgb(255, 255, 255, 0.3),
+                0 0 0 2.8rem rgb(255, 255, 255, 0.2),
+                0 0 0 4.0rem rgb(255, 255, 255, 0.1);
+        }
+    }
+
+    @keyframes moon-rays {
+        0%,
+        100% {
+            box-shadow:
+                0 0 0.5rem rgb(79, 85, 148, 1),
+                0 0 0 1rem rgb(79, 85, 148, 0.8),
+                0 0 1.5rem rgb(79, 85, 148, 0.6),
+                0 0 0 2rem rgb(79, 85, 148, 0.4),
+                0 0 2.5rem rgb(79, 85, 148, 0.2);
+        }
+
+        50% {
+            box-shadow:
+                0 0 0.5rem rgb(79, 85, 148, 1),
+                0 0 0 1.5rem rgb(79, 85, 148, 0.8),
+                0 0 2rem rgb(79, 85, 148, 0.6),
+                0 0 0 2.5rem rgb(79, 85, 148, 0.4),
+                0 0 3rem rgb(79, 85, 148, 0.2);
+        }
+    }
+}
