@@ -9,10 +9,8 @@ export function WeatherCard() {
     const [temperature, setTemperature] = useState('')
     const [weather, setWeather] = useState('')
     const [place, setPlace] = useState('')
-    const [time, setTime] = useState('')
     const [icon, setIcon] = useState(urlIcon + '10d@2x.png')
     const [isNight, setIsNight] = useState(false)
-    const [bgTime, setBgTime] = useState('sunny-bg')
 
     useEffect(() => {
         fetchData()
@@ -28,7 +26,6 @@ export function WeatherCard() {
             setTemperature(celsius + '°C')
             setWeather(response.weather[0].description)
             setPlace(response.name + ', ' + response.sys.country)
-            setTime(formattedTime + ' hrs')
             setIcon(urlIcon + response.weather[0].icon + '@2x.png')
 
             setWidget(formattedTime)
@@ -47,7 +44,7 @@ export function WeatherCard() {
         }
     }
 
-    const textColorClass = isNight ? 'text-slate-100' : 'text-slate-700';
+    const textColorClass = isNight ? 'text-slate-100' : 'text-slate-700'
 
     return (
         <div className='relative flex items-center col-span-2 md:aspect-auto rounded-2xl sm:rounded-3xl overflow-hidden bg-slate-700 dark:bg-slate-900'>
@@ -64,9 +61,6 @@ export function WeatherCard() {
                 </p>
                 <p className={`hidden sm:flex text-xs xl:text-2xl md:text-lg sm:text-lg font-semibold ${textColorClass}`}>
                     {place}
-                </p>
-                <p className={`hidden sm:flex text-xs xl:text-xl md:text-base sm:text-base font-medium ${textColorClass}`}>
-                    {time}
                 </p>
             </div>
         </div>
