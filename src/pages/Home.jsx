@@ -13,6 +13,7 @@ import { CertificatesCard } from '../components/CertificatesCard'
 import { Transition } from '../components/Transition'
 import { ChatAI } from '../components/ChatAI'
 import { PhrasesCard } from '../components/PhrasesCard'
+import { CurriculumCard } from '../components/CurriculumCard'
 
 const Home = () => {
     return (
@@ -21,7 +22,7 @@ const Home = () => {
             <main className='flex flex-col place-items-center p-6'>
                 <div className='grid grid-cols-3 md:grid-cols-4 gap-2 md:gap-4 max-w-5xl md:max-w-5xl xl:max-w-7xl'>
                     <AboutMeCard />
-                    <DarkModeCard />
+                    <CurriculumCard link={'https://docs.google.com/document/d/1K_RaBKxsiGUQUHaNt_yg91-W8BYAfSpAQM-THx3PKgY/edit?usp=sharing'} />
                     <SolidIconCard link={'mailto:imlost@micorreo.upp.edu.mx'} icon={'envelope'} />
                     <InfoCard header={'Age'} body={'21'} footer={'Years old'} color={'purple'} />
                     <SocialNetworkCard link={'https://www.linkedin.com/in/ostoaleonardo/'} icon={'linkedin-in'} color={'linkedin'} />

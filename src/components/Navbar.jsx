@@ -16,13 +16,17 @@ export function Navbar() {
                     </span>
                 </Link>
                 <div className='flex md:order-2'>
-                    <button type='button' className='text-slate-100 dark:text-slate-950 bg-slate-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-slate-100 hover:scale-125 transition-all'>
+                    <a
+                        target='_blank'
+                        rel='noreferrer'
+                        href='https://docs.google.com/document/d/1K_RaBKxsiGUQUHaNt_yg91-W8BYAfSpAQM-THx3PKgY/edit?usp=sharing'
+                        className='text-sm font-medium text-slate-100 dark:text-slate-950 bg-slate-700 dark:bg-slate-100 rounded-lg px-4 py-2 hover:scale-125 transition-all'>
                         <FontAwesomeIcon
                             className='text-slate-100 dark:text-slate-950 text-sm mr-3'
                             icon={faFile}
                         />
                         Download CV
-                    </button>
+                    </a>
                 </div>
                 <div className='items-center justify-between hidden w-full md:flex md:w-auto md:order-1' id='navbar-cta'>
                     <span className='self-center text-3xl text-slate-700 dark:text-slate-100 font-bold whitespace-nowrap'>

@@ -7,7 +7,7 @@ export function ChatAI() {
     const { isOpen, onOpen, onClose } = useDisclosure()
 
     const handleOpen = () => {
-        onOpen();
+        onOpen()
     }
 
     return (
@@ -22,7 +22,12 @@ export function ChatAI() {
                 </div>
                 <img
                     className='w-auto h-1/2 md:h-3/4 rounded-full'
-                    src='https://unavatar.io/twitter/avicii'
+                    src='https://unavatar.io/twitter/ostoaleonardo_?ttl=1h'
+                    alt='Avatar'
+                    onError={(e) => {
+                        e.target.onerror = null
+                        e.target.src = 'https://avatars.githubusercontent.com/u/141528763'
+                    }}
                 />
             </div>
 
