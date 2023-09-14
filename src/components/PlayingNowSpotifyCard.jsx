@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSpotify } from '@fortawesome/free-brands-svg-icons'
 import Lottie from 'lottie-react'
-import playingNow from '../../public/anims/playing-now.json'
+import playingNow from '../assets/anims/playing-now.json'
 import getRecentlyPlayedItem from '../scripts/playingNowSpotify'
 
 export function PlayingNowSpotifyCard() {

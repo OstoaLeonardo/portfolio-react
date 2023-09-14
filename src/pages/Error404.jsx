@@ -1,8 +1,8 @@
 import Lottie from 'lottie-react'
 import { Link } from 'react-router-dom'
 import { Transition } from '../components/Transition'
-import error404 from '../../public/anims/error404.json'
-import astronaut from '../../public/anims/astronaut.json'
+import error404 from '../assets/anims/error404.json'
+import astronaut from '../assets/anims/astronaut.json'
 
 const Error = () => {
     return (
