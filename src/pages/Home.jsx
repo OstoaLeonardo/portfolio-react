@@ -23,9 +23,9 @@ const Home = () => {
                 <div className='grid grid-cols-3 md:grid-cols-4 gap-2 md:gap-4 max-w-5xl md:max-w-5xl xl:max-w-7xl'>
                     <AboutMeCard />
                     <CurriculumCard link={'https://docs.google.com/document/d/1K_RaBKxsiGUQUHaNt_yg91-W8BYAfSpAQM-THx3PKgY/edit?usp=sharing'} />
-                    <SolidIconCard link={'mailto:imlost@micorreo.upp.edu.mx'} icon={'envelope'} />
+                    <SolidIconCard link={'mailto:ostoaleonardo.dev@gmail.com'} icon={'envelope'} />
                     <InfoCard header={'Age'} body={'21'} footer={'Years old'} color={'purple'} />
-                    <SocialNetworkCard link={'https://www.linkedin.com/in/ostoaleonardo/'} icon={'linkedin-in'} color={'linkedin'} />
+                    <SocialNetworkCard link={'https://www.linkedin.com/in/ostoa-leonardo/'} icon={'linkedin-in'} color={'linkedin'} />
                     <ProjectsCard />
                     <GitHubCard />
                     <TechnologiesCard />
@@ -33,7 +33,7 @@ const Home = () => {
                     <PlayingNowSpotifyCard />
                     <SocialNetworkCard link={'https://www.behance.net/ostoaleonardo'} icon={'behance'} color={'behance'} />
                     <DiscordStatusCard />
-                    <SocialNetworkCard link={'https://twitter.com/ostoaleonardo'} icon={'twitter'} color={'twitter'} />
+                    <SocialNetworkCard link={'https://twitter.com/ostoaleonardo_'} icon={'twitter'} color={'twitter'} />
                     <WeatherCard />
                     <ChatAI />
                     <CertificatesCard />
