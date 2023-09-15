@@ -22,12 +22,8 @@ export function ChatAI() {
                 </div>
                 <img
                     className='w-auto h-1/2 md:h-3/4 rounded-full'
-                    src='https://unavatar.io/twitter/ostoaleonardo_?ttl=1h'
+                    src='https://avatars.githubusercontent.com/u/141528763'
                     alt='Avatar'
-                    onError={(e) => {
-                        e.target.onerror = null
-                        e.target.src = 'https://avatars.githubusercontent.com/u/141528763'
-                    }}
                 />
             </div>
 
