@@ -25,7 +25,7 @@ const Home = () => {
                     <CurriculumCard link={'https://docs.google.com/document/d/1K_RaBKxsiGUQUHaNt_yg91-W8BYAfSpAQM-THx3PKgY/edit?usp=sharing'} />
                     <SolidIconCard link={'mailto:ostoaleonardo.dev@gmail.com'} icon={'envelope'} />
                     <InfoCard header={'Age'} body={'21'} footer={'Years old'} color={'purple'} />
-                    <SocialNetworkCard link={'https://www.linkedin.com/in/ostoa-leonardo/'} icon={'linkedin-in'} color={'linkedin'} />
+                    <SocialNetworkCard link={'https://www.linkedin.com/in/ostoaleonardo/'} icon={'linkedin-in'} color={'linkedin'} />
                     <ProjectsCard />
                     <GitHubCard />
                     <TechnologiesCard />
