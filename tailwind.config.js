@@ -48,6 +48,11 @@ export default {
           dark: '#CDAB56',
         }
       },
+      backgroundImage: {
+        'github-card': "url('/src/assets/images/github.webp')",
+        'projects-card': "url('/src/assets/images/projects.webp')",
+        'certificates-card': "url('/src/assets/images/certificates.webp')",
+      }
     },
   },
   plugins: [nextui()],

@@ -3,16 +3,10 @@ import { faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
 export function GitHubCard() {
-    const url = 'https://firebasestorage.googleapis.com/v0/b/portfolio-ostoa-leonardo.appspot.com/o/github.png?alt=media&token=bdcf5525-6a66-4cf7-93dd-4d47b4dd2e02'
-
-    const backgroundImageStyle = {
-        backgroundImage: `url(${url})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-    }
+    // const image = require('../assets/images/github.webp')
 
     return (
-        <a href='https://github.com/ostoaleonardo' target='_blank' className='relative flex flex-col justify-between col-span-2 md:aspect-auto rounded-2xl sm:rounded-3xl overflow-hidden bg-github p-4 sm:p-6 md:p-10 hover:scale-105 transition-all duration-300' style={backgroundImageStyle}>
+        <a href='https://github.com/ostoaleonardo' target='_blank' className='relative flex flex-col justify-between col-span-2 rounded-2xl sm:rounded-3xl bg-github bg-github-card bg-cover p-4 sm:p-6 md:p-10 hover:scale-105 transition-all duration-300'>
             <div className='absolute flex top-4 sm:top-8 right-4 sm:right-8'>
                 <FontAwesomeIcon
                     className='text-slate-200 text-xs md:text-sm'
