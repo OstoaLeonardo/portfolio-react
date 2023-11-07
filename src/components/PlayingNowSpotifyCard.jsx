@@ -38,10 +38,10 @@ export function PlayingNowSpotifyCard() {
         <div className='flex flex-col justify-between items-center col-span-2 md:aspect-auto rounded-2xl sm:rounded-3xl overflow-hidden bg-slate-800 bg-cover bg-center p-4 sm:p-6 md:p-10' style={backgroundImageStyle}>
             <header className='flex items-center w-full h-auto'>
                 <FontAwesomeIcon
-                    className='text-slate-200 text-lg md:text-4xl mr-1 md:mr-3'
+                    className='text-slate-100 text-lg md:text-4xl mr-1 md:mr-3'
                     icon={faSpotify}
                 />
-                <p className='text-slate-200 text-sm sm:text-xl md:text-2xl xl:text-3xl font-bold'>
+                <p className='text-slate-100 text-sm sm:text-xl md:text-2xl xl:text-3xl font-bold'>
                     Spotify
                 </p>
             </header>
@@ -52,7 +52,7 @@ export function PlayingNowSpotifyCard() {
                         {recentlyPlayed.title}
                     </p>
                 </div>
-                <p className='text-slate-200 text-xs sm:text-lg md:text-xl xl:text-2xl font-medium line-clamp-1'>
+                <p className='text-slate-100 text-xs sm:text-lg md:text-xl xl:text-2xl font-medium line-clamp-1'>
                     {recentlyPlayed.artist}
                 </p>
             </footer>

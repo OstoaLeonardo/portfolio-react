@@ -1,4 +1,4 @@
-const classNames = 'w-[85%] h-auto text-slate-600 dark:text-slate-300 aspect-square'
+const classNames = 'w-[85%] h-auto text-slate-600 dark:text-slate-100 aspect-square'
 
 export function NextJsIcon() {
     return (

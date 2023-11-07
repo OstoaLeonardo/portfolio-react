@@ -70,10 +70,10 @@ export function DiscordStatusCard() {
             </p>
             <div className='absolute right-2 bottom-2 md:right-3 md:bottom-3 xl:right-4 xl:bottom-4 flex flex-row justify-center items-center'>
                 <div className='hidden md:flex flex-col justify-center items-end'>
-                    <p className='text-slate-200 font-semibold sm:text-xs md:text-xs xl:text-base'>
+                    <p className='text-slate-100 font-semibold sm:text-xs md:text-xs xl:text-base'>
                         {activity}
                     </p>
-                    <p className='text-slate-300 font-medium sm:text-xs md:text-xs xl:text-sm'>
+                    <p className='text-slate-100 font-medium sm:text-xs md:text-xs xl:text-sm'>
                         {details}
                     </p>
                 </div>

@@ -16,7 +16,7 @@ export function ChatAI() {
                 onClick={handleOpen}>
                 <div className='absolute flex top-4 sm:top-8 right-4 sm:right-8'>
                     <FontAwesomeIcon
-                        className='text-slate-700 dark:text-slate-300 text-xs md:text-sm'
+                        className='text-slate-700 dark:text-slate-100 text-xs md:text-sm'
                         icon={faArrowRight}
                     />
                 </div>

@@ -25,27 +25,27 @@ export default {
         'github': '#24292e',
         'discord': {
           light: '#5865f2',
-          dark: '#5A74D2',
+          dark: '#5a74d2',
         },
         'linkedin': {
           light: '#0a66c2',
-          dark: '#2C6CAB',
+          dark: '#2c6cab',
         },
         'behance': {
-          light: '#3278FF',
+          light: '#3278ff',
           dark: '#000b1d',
         },
         'twitter': {
           light: '#179cf0',
-          dark: '#0D68A1',
+          dark: '#0d68a1',
         },
         'purple': {
           light: '#6b5ce5',
-          dark: '#4C4681',
+          dark: '#4c4681',
         },
-        'yellow': {
-          light: '#F7C958',
-          dark: '#CDAB56',
+        'red': {
+          light: '#f31260',
+          dark: '#ed4b50',
         }
       },
       backgroundImage: {

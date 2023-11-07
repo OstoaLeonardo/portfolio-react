@@ -21,7 +21,7 @@ export function TechnologiesCard() {
             <div className='w-full h-full grid grid-cols-4 items-center place-items-center'>
                 {technologies.map((technology) => (
                     <FontAwesomeIcon
-                        className='w-[85%] h-auto text-slate-600 dark:text-slate-300 aspect-square'
+                        className='w-[85%] h-auto text-slate-600 dark:text-slate-100 aspect-square'
                         icon={['fab', technology]}
                     />
                 ))}

@@ -1,5 +1,4 @@
 import { AboutMeCard } from '../components/AboutMeCard'
-import { DarkModeCard } from '../components/DarkModeCard'
 import { DiscordStatusCard } from '../components/DiscordStatusCard'
 import { GitHubCard } from '../components/GitHubCard'
 import { InfoCard } from '../components/InfoCard'
@@ -23,13 +22,13 @@ const Home = () => {
                 <div className='grid grid-cols-3 md:grid-cols-4 gap-2 md:gap-4 max-w-5xl md:max-w-5xl xl:max-w-7xl'>
                     <AboutMeCard />
                     <CurriculumCard link={'https://docs.google.com/document/d/1K_RaBKxsiGUQUHaNt_yg91-W8BYAfSpAQM-THx3PKgY/edit?usp=sharing'} />
-                    <SolidIconCard link={'mailto:ostoaleonardo.dev@gmail.com'} icon={'envelope'}  label={'Email'} />
+                    <SolidIconCard link={'mailto:ostoaleonardo.dev@gmail.com'} icon={'envelope'} label={'Email'} />
                     <InfoCard header={'Age'} body={'21'} footer={'Years old'} color={'purple'} />
                     <SocialNetworkCard link={'https://www.linkedin.com/in/ostoaleonardo/'} icon={'linkedin-in'} color={'linkedin'} label={'LinkedIn profile'} />
                     <ProjectsCard />
                     <GitHubCard />
                     <TechnologiesCard />
-                    <InfoCard header={''} body={'+3'} footer={'Years of experience'} color={'yellow'} />
+                    <InfoCard header={''} body={'+3'} footer={'Years of experience'} color={'red'} />
                     <PlayingNowSpotifyCard />
                     <SocialNetworkCard link={'https://www.behance.net/ostoaleonardo'} icon={'behance'} color={'behance'} label={'Behance profile'} />
                     <DiscordStatusCard />

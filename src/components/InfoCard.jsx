@@ -1,7 +1,7 @@
 export function InfoCard({ header, body, footer, color }) {
     const colorVariants = {
         'purple': 'bg-purple-light dark:bg-purple-dark',
-        'yellow': 'bg-yellow-light dark:bg-yellow-dark',
+        'red': 'bg-red-light dark:bg-red-dark',
     }
 
     return (

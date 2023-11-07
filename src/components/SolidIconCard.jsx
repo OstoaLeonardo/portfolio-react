@@ -11,12 +11,12 @@ export function SolidIconCard({ link, icon, label }) {
             className='relative flex flex-col justify-center items-center col-span-1 aspect-square rounded-2xl sm:rounded-3xl bg-crayon dark:bg-slate-800 p-10 hover:scale-105 transition-all duration-300'>
             <div className='absolute flex top-4 sm:top-8 right-4 sm:right-8'>
                 <FontAwesomeIcon
-                    className='text-slate-700 dark:text-slate-300 text-xs md:text-sm'
+                    className='text-slate-700 dark:text-slate-100 text-xs md:text-sm'
                     icon={faUpRightFromSquare}
                 />
             </div>
             <FontAwesomeIcon
-                className='text-slate-700 dark:text-slate-300 text-2xl sm:text-6xl xl:text-8xl'
+                className='text-slate-700 dark:text-slate-100 text-2xl sm:text-6xl xl:text-8xl'
                 icon={['fas', icon]}
             />
         </a>
