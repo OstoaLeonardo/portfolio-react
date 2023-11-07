@@ -3,10 +3,9 @@ import { faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
 export function GitHubCard() {
-    // const image = require('../assets/images/github.webp')
-
     return (
-        <a href='https://github.com/ostoaleonardo' target='_blank' className='relative flex flex-col justify-between col-span-2 rounded-2xl sm:rounded-3xl bg-github bg-github-card bg-cover p-4 sm:p-6 md:p-10 hover:scale-105 transition-all duration-300'>
+        <a href='https://github.com/ostoaleonardo' target='_blank' aria-label='GitHub profile'
+            className='relative flex flex-col justify-between col-span-2 rounded-2xl sm:rounded-3xl bg-github bg-github-card bg-cover p-4 sm:p-6 md:p-10 hover:scale-105 transition-all duration-300'>
             <div className='absolute flex top-4 sm:top-8 right-4 sm:right-8'>
                 <FontAwesomeIcon
                     className='text-slate-200 text-xs md:text-sm'
