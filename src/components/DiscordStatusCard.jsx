@@ -59,7 +59,7 @@ export function DiscordStatusCard() {
     }
 
     return (
-        <div className='relative flex justify-center items-center col-span-1 aspect-square rounded-2xl sm:rounded-3xl overflow-hidden bg-discord-light dark:bg-discord-dark'>
+        <div className='relative flex justify-center items-center col-span-1 aspect-square rounded-2xl sm:rounded-3xl bg-discord-light dark:bg-discord-dark'>
             <FontAwesomeIcon
                 className='text-stone-100 text-xs sm:text-sm md:text-lg xl:text-2xl mr-1 sm:mr-2'
                 icon={faDiscord}
