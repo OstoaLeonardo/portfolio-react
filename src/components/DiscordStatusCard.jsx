@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDiscord } from '@fortawesome/free-brands-svg-icons'
-import { getDiscordStatus } from '../scripts/discord'
+import { getDiscordStatus } from '../scripts/discord.js'
 
 export function DiscordStatusCard() {
     const urlImg = 'https://cdn.discordapp.com/app-assets/'

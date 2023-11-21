@@ -1,7 +1,7 @@
 import { useDisclosure } from '@nextui-org/modal'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
-import { ChatAIModal } from './ChatAIModal'
+import { ChatAIModal } from './ChatAIModal.jsx'
 
 export function ChatAI() {
     const { isOpen, onOpen, onClose } = useDisclosure()

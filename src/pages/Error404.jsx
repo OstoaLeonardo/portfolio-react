@@ -1,6 +1,6 @@
 import Lottie from 'lottie-react'
 import { Link } from 'react-router-dom'
-import { Transition } from '../components/Transition'
+import { Transition } from '../components/Transition.jsx'
 import error404 from '../assets/anims/error404.json'
 import astronaut from '../assets/anims/astronaut.json'
 

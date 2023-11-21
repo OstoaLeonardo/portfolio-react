@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { getWeather } from '../scripts/openWeather'
-import { WeatherWidget } from './WeatherWidget'
+import { getWeather } from '../scripts/openWeather.js'
+import { WeatherWidget } from './WeatherWidget.jsx'
 
 export function WeatherCard() {
     const lat = '20.117'

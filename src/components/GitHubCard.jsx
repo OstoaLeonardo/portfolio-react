@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
-import { retrieveContributionData } from '../scripts/github'
+import { retrieveContributionData } from '../scripts/github.js'
 
 export function GitHubCard() {
     const [contributions, setContributions] = useState([])

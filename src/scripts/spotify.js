@@ -36,7 +36,7 @@ const fetchData = async (accessToken, endPoint) => {
     return response.json();
 };
 
-const getRecentlyPlayedItem = async () => {
+export const getRecentlyPlayedItem = async () => {
     try {
         const { access_token } = await getAccessToken();
         const song = await fetchData(access_token, recentlyPlayedEndPoint);
@@ -67,5 +67,3 @@ const formatRecentlySong = (song) => {
         duration,
     };
 };
-
-export default getRecentlyPlayedItem;

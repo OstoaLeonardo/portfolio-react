@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSpotify } from '@fortawesome/free-brands-svg-icons'
+import { getRecentlyPlayedItem } from '../scripts/spotify.js'
 import Lottie from 'lottie-react'
 import playingNow from '../assets/anims/playing-now.json'
-import getRecentlyPlayedItem from '../scripts/playingNowSpotify'
 
 export function PlayingNowSpotifyCard() {
     const [recentlyPlayed, setRecentlyPlayed] = useState({

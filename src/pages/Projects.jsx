@@ -1,7 +1,7 @@
-import { Navbar } from '../components/Navbar'
-import { Transition } from '../components/Transition'
-import { ProjectCard } from '../components/ProjectCard'
-import { projects } from '../constants/projects'
+import { Navbar } from '../components/Navbar.jsx'
+import { Transition } from '../components/Transition.jsx'
+import { ProjectCard } from '../components/ProjectCard.jsx'
+import { projects } from '../constants/projects.js'
 
 const Projects = () => {
     return (

@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom'
-import Home from './pages/Home'
-import Projects from './pages/Projects'
-import Error404 from './pages/Error404'
+import Home from './pages/Home.jsx'
+import Projects from './pages/Projects.jsx'
+import Error404 from './pages/Error404.jsx'
 
 function App() {
   return (

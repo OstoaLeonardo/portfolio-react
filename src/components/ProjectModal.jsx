@@ -2,7 +2,7 @@ import { Modal, ModalContent, ModalHeader, ModalBody } from '@nextui-org/modal'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
-import { Slideshow } from './Slideshow'
+import { Slideshow } from './Slideshow.jsx'
 
 export function ProjectModal({ isOpen, onClose, project }) {
     const colorVariants = {

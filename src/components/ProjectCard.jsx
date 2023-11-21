@@ -2,7 +2,7 @@ import { useDisclosure } from '@nextui-org/modal'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
-import { ProjectModal } from './ProjectModal'
+import { ProjectModal } from './ProjectModal.jsx'
 
 export function ProjectCard({ project }) {
     const { isOpen, onOpen, onClose } = useDisclosure()

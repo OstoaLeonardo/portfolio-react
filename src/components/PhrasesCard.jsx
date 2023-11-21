@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { getQuote } from '../scripts/quotable'
+import { getQuote } from '../scripts/quotable.js'
 
 export function PhrasesCard() {
     const [phrase, setPhrase] = useState('')
