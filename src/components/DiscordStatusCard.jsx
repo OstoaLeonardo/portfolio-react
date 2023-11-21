@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import axios from 'axios'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDiscord } from '@fortawesome/free-brands-svg-icons'
+import { getDiscordStatus } from '../scripts/discord'
 
 export function DiscordStatusCard() {
-    const url = 'https://api.lanyard.rest/v1/users/771148579356016650'
     const urlImg = 'https://cdn.discordapp.com/app-assets/'
     const urlImgSpotify = 'https://developer.spotify.com/images/guidelines/design/icon3@2x.png'
     const urlGif = 'https://www.icegif.com/wp-content/uploads/2021/10/icegif-300.gif'
@@ -26,8 +25,8 @@ export function DiscordStatusCard() {
 
     const getStatus = async () => {
         try {
-            const response = await axios.get(url)
-            const { activities, discord_status } = response.data.data
+            const status = await getDiscordStatus()
+            const { activities, discord_status } = status
 
             setStatus(statusMap[discord_status] || 'Offline')
 

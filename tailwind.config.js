@@ -22,7 +22,8 @@ export default {
         'spotify': '#00cf74',
         'store': '#c084fc',
         'movies': '#f31260',
-        'github': '#24292e',
+        'github': '#0d1117',
+        'github-squeares': '#39d353',
         'discord': {
           light: '#5865f2',
           dark: '#5a74d2',
@@ -52,6 +53,9 @@ export default {
         'github-card': "url('/src/assets/images/github.webp')",
         'projects-card': "url('/src/assets/images/projects.webp')",
         'certificates-card': "url('/src/assets/images/certificates.webp')",
+      },
+      gridTemplateRows: {
+        '7': 'repeat(7, minmax(0, 1fr))',
       }
     },
   },

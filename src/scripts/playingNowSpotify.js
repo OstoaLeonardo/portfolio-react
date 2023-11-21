@@ -1,6 +1,6 @@
-const client_id = 'b98830dfd88f4b03b153bbe48623e883';
-const secret_id = '6e7f3069ac9f485c82fbe77a78b00c19';
-const refresh_token = 'AQAReYa6GqbITmLxO_3_L3Lej04jxyXOUE9c7qnb0SeL-RpOKU_9IZV3dE6Jhiag0b7EqnZbjwHGCcAqlypyL6t_gHXVcW3Fgl0tYl3nPPy8bRLdhv_cYpZ9ZK8mJUJBzow'
+const client_id = import.meta.env.VITE_SPOTIFY_CLIENT_ID;
+const secret_id = import.meta.env.VITE_SPOTIFY_SECRET_ID;
+const refresh_token = import.meta.env.VITE_SPOTIFY_REFRESH_TOKEN;
 
 const tokenEndPoint = 'https://accounts.spotify.com/api/token';
 const recentlyPlayedEndPoint = 'https://api.spotify.com/v1/me/player/recently-played?limit=1';

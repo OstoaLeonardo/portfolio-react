@@ -4,7 +4,7 @@ import { faArrowRight, faPaperclip } from '@fortawesome/free-solid-svg-icons'
 
 export function ProjectsCard() {
     return (
-        <Link to='/projects' className='relative flex flex-col col-span-2 rounded-2xl sm:rounded-3xl bg-slate-600 bg-projects-card bg-cover p-4 sm:p-6 md:p-10 hover:scale-105 transition-all duration-300 cursor-pointer'>
+        <Link to='/projects' className='relative flex flex-col col-span-2 rounded-2xl sm:rounded-3xl bg-slate-800 bg-projects-card bg-cover p-4 sm:p-6 md:p-10 hover:scale-105 transition-all duration-300 cursor-pointer'>
             <div className='absolute flex top-4 sm:top-8 right-4 sm:right-8'>
                 <FontAwesomeIcon
                     className='text-slate-100 text-xs md:text-sm'

@@ -1,24 +1,19 @@
 import { useEffect, useState } from 'react'
-import axios from 'axios'
+import { getQuote } from '../scripts/quotable'
 
 export function PhrasesCard() {
-    const url = 'https://api.quotable.io/random?technology&maxLength=80'
     const [phrase, setPhrase] = useState('')
     const [autor, setAutor] = useState('')
 
     useEffect(() => {
+        const getPhrase = async () => {
+            const data = await getQuote()
+            setPhrase(`"${data.content}"`)
+            setAutor(data.author)
+        }
+
         getPhrase()
     }, [])
-
-    const getPhrase = async () => {
-        try {
-            const response = await axios.get(url)
-            setPhrase(`"${response.data.content}"`)
-            setAutor(response.data.author)
-        } catch (error) {
-            console.error(error)
-        }
-    }
 
     return (
         <div className='xl:min-h-[300px] flex flex-col row-span-1 col-span-2 text-end justify-center md:aspect-auto rounded-2xl sm:rounded-3xl overflow-hidden bg-crayon dark:bg-github p-4 sm:p-6 md:p-10 gap-1 md:gap-6'>
