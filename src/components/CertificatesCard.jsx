@@ -1,9 +1,13 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAward, faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
+import { strings } from '../constants/strings.js'
+import useLenguage from '../hooks/useLenguage.js'
 
 const certificates = ['JavaScript', 'React', 'Diseño UI/UX']
 
 export function CertificatesCard() {
+    const { language } = useLenguage()
+
     return (
         <a href='https://codigofacilito.com/usuarios/ostoaleonardo' target='_blank' aria-label='Certificates'
             className='relative flex flex-col justify-center md:justify-start row-span-1 col-span-1 md:col-span-2 rounded-2xl sm:rounded-3xl bg-slate-600 dark:bg-slate-800 bg-certificates-card bg-cover aspect-square sm:aspect-auto p-4 sm:p-6 md:p-10 hover:scale-105 transition-all duration-300 cursor-pointer'>
@@ -19,7 +23,7 @@ export function CertificatesCard() {
                     icon={faAward}
                 />
                 <p className='text-slate-100 text-sm sm:text-xl md:text-2xl xl:text-3xl font-bold'>
-                    Courses
+                    {strings[language].certificatesCard.title}
                 </p>
             </header>
             <FontAwesomeIcon

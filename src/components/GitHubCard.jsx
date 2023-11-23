@@ -3,8 +3,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { retrieveContributionData } from '../scripts/github.js'
+import { strings } from '../constants/strings.js'
+import useLenguage from '../hooks/useLenguage.js'
 
 export function GitHubCard() {
+    const { language } = useLenguage()
     const [contributions, setContributions] = useState([])
 
     useEffect(() => {
@@ -30,7 +33,6 @@ export function GitHubCard() {
 
         return months
     }
-
 
     return (
         <a href='https://github.com/ostoaleonardo' target='_blank' aria-label='GitHub profile'
@@ -73,7 +75,7 @@ export function GitHubCard() {
                     })}
                 </ul>
                 <span className='flex lg:hidden text-slate-100 text-xs sm:text-lg md:text-xl xl:text-2xl font-medium line-clamp-1'>
-                    My GitHub profile
+                    {strings[language].githubCard.title}
                 </span>
             </footer>
         </a>
