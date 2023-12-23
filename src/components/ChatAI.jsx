@@ -1,7 +1,8 @@
 import { useDisclosure } from '@nextui-org/modal'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { ChatAIModal } from './ChatAIModal.jsx'
+import { BorderCard } from './BorderCard.jsx'
+import { IconCard } from './IconCard.jsx'
 
 export function ChatAI() {
     const { isOpen, onOpen, onClose } = useDisclosure()
@@ -12,20 +13,17 @@ export function ChatAI() {
 
     return (
         <>
-            <div className='relative flex flex-col justify-center items-center col-span-1 aspect-square rounded-2xl sm:rounded-3xl overflow-hidden md:p-10 bg-crayon dark:bg-slate-800 hover:scale-105 transition-all duration-300 cursor-pointer'
-                onClick={handleOpen}>
-                <div className='absolute flex top-4 sm:top-8 right-4 sm:right-8'>
-                    <FontAwesomeIcon
-                        className='text-slate-700 dark:text-slate-100 text-xs md:text-sm'
-                        icon={faArrowRight}
+            <BorderCard size='small' titleBorder='Chat AI'>
+                <div className='w-full h-full flex justify-center items-center bg-crayon dark:bg-slate-800 cursor-pointer'
+                    onClick={handleOpen}>
+                    <IconCard icon={faArrowRight} />
+                    <img
+                        className='w-3/6 aspect-square rounded-full'
+                        src='https://avatars.githubusercontent.com/u/141528763'
+                        alt='Avatar'
                     />
                 </div>
-                <img
-                    className='w-auto h-1/2 md:h-3/4 rounded-full'
-                    src='https://avatars.githubusercontent.com/u/141528763'
-                    alt='Avatar'
-                />
-            </div>
+            </BorderCard>
 
             {isOpen && (
                 <ChatAIModal isOpen={isOpen} onClose={onClose} />

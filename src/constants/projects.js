@@ -1,6 +1,3 @@
-import dadu1 from '../assets/images/dadu-1.webp'
-import dadu2 from '../assets/images/dadu-2.webp'
-import dadu3 from '../assets/images/dadu-3.webp'
 import prefer1 from '../assets/images/would-u-rather-1.webp'
 import prefer2 from '../assets/images/would-u-rather-2.webp'
 import prefer3 from '../assets/images/would-u-rather-3.webp'
@@ -16,19 +13,6 @@ import store3 from '../assets/images/store3.webp'
 
 export const projects = [
     {
-        title: 'Dadu',
-        type: 'Mobile app',
-        description: 'A game of questions about general culture and other topics.',
-        images: [
-            dadu1,
-            dadu2,
-            dadu3,
-        ],
-        technologies: ['Android', 'Java', 'SQLite', 'Lottie'],
-        github: 'https://github.com/ostoaleonardo/dadu',
-        color: 'dadu',
-    },
-    {
         title: '¿Qué prefieres?',
         type: 'Web app',
         description: 'A game of questions about what you prefer between two options.',
@@ -43,7 +27,7 @@ export const projects = [
         color: 'prefer',
     },
     {
-        title: 'Your Spotify Stats',
+        title: 'Wavestify',
         type: 'Web app',
         description: 'A web app that shows your Spotify stats.',
         images: [
@@ -51,12 +35,12 @@ export const projects = [
             spotify2,
         ],
         technologies: ['React', 'JavaScript', 'NextUI', 'Tailwind', 'Framer Motion'],
-        demo: 'https://getspotifystats.vercel.app/',
+        demo: 'https://wavestify.vercel.app/',
         github: 'https://github.com/ostoaleonardo/spotify-stats',
         color: 'spotify',
     },
     {
-        title: 'Store E-commerce',
+        title: 'E-commerce',
         type: 'Web app',
         description: 'A web app that simulates an e-commerce store, where you can add products to the cart and make a purchase.',
         technologies: ['React', 'JavaScript', 'NextUI', 'Tailwind', 'Framer Motion'],
@@ -83,7 +67,7 @@ export const projects = [
         color: 'movies',
     },
     {
-        title: 'My portfolio',
+        title: 'Portfolio',
         type: 'Web app',
         description: 'A portfolio of my projects and skills in web and mobile development.',
         images: [

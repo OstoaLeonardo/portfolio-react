@@ -4,7 +4,6 @@ export default {
   content: [
     './index.html',
     './src/**/*.{js,ts,jsx,tsx}',
-    // component modal net ui
     './node_modules/@nextui-org/theme/dist/components/modal.js',
   ],
   theme: {
@@ -16,7 +15,6 @@ export default {
       colors: {
         'crayon': '#c1cfe6',
         'bright': '#e8ebf2',
-        'dadu': '#4685ff',
         'prefer': '#ff475a',
         'portfolio': '#1e2530',
         'spotify': '#00cf74',
@@ -52,7 +50,6 @@ export default {
       backgroundImage: {
         'github-card': "url('/src/assets/images/github.webp')",
         'projects-card': "url('/src/assets/images/projects.webp')",
-        'certificates-card': "url('/src/assets/images/certificates.webp')",
       },
       gridTemplateRows: {
         '7': 'repeat(7, minmax(0, 1fr))',

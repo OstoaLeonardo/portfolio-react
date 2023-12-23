@@ -53,17 +53,13 @@ const formatRecentlySong = (song) => {
 
     const track = song.items[0].track;
 
-    const albumImageUrl = track.album.images[0]?.url || '';
+    const image = track.album.images[0]?.url || '';
     const artist = track.artists.map((_artist) => _artist.name).join(', ');
-    const songUrl = track.external_urls.spotify || '';
     const title = track.name || '';
-    const duration = track.duration_ms || 0;
 
     return {
-        albumImageUrl,
-        artist,
-        songUrl,
         title,
-        duration,
+        artist,
+        image,
     };
 };

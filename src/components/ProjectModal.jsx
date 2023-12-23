@@ -1,8 +1,9 @@
 import { Modal, ModalContent, ModalHeader, ModalBody } from '@nextui-org/modal'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { Slideshow } from './Slideshow.jsx'
+import { IconLink } from './IconLink.jsx'
+import { Chip } from './Chip.jsx'
 
 export function ProjectModal({ isOpen, onClose, project }) {
     const colorVariants = {
@@ -16,53 +17,42 @@ export function ProjectModal({ isOpen, onClose, project }) {
 
     return (
         isOpen && (
-            <Modal isOpen={isOpen} onClose={onClose} size='2xl' backdrop='opaque' radius='lg' placement='center'
+            <Modal isOpen={isOpen} onClose={onClose} size='xl' backdrop='opaque' radius='none' placement='center'
                 classNames={{
                     base: `${colorVariants[project.color]}`,
-                    closeButton: 'text-slate-100'
+                    closeButton: 'text-slate-100 hover:bg-neutral-900/50 rounded-none',
                 }}
             >
                 <ModalContent>
                     {(onClose) => (
                         <>
                             <ModalHeader className='flex flex-col justify-between mt-4'>
-                                <div className='flex flex-row justify-between items-start'>
-                                    <span className='text-4xl font-bold'>
-                                        {project.title}
-                                    </span>
-                                    <div className='flex justify-center items-center gap-2'>
-                                        {project.demo && (
-                                            <a href={project.demo} target='_blank'
-                                                className='flex text-slate-100 bg-neutral-800 font-medium justify-center items-center shadow rounded-lg pr-2 hover:scale-125 transition-all duration-200'>
-                                                <FontAwesomeIcon
-                                                    className='text-slate-100 text-xs p-2'
-                                                    icon={faUpRightFromSquare}
-                                                />
-                                                Demo
-                                            </a>
-                                        )}
-                                        {project.github && (
-                                            <a href={project.github} target='_blank'
-                                                className='flex bg-neutral-800 justify-center items-center shadow rounded-lg hover:scale-125 transition-all duration-200'>
-                                                <FontAwesomeIcon
-                                                    className='text-slate-100 text-xs p-2'
-                                                    icon={faGithub}
-                                                />
-                                            </a>
-                                        )}
+                                <div className='flex flex-col justify-between'>
+                                    <div className='flex flex-row justify-between items-start'>
+                                        <div className='flex flex-col'>
+                                            <span className='text-white text-base font-oswald opacity-90 uppercase'>
+                                                {project.type}
+                                            </span>
+                                        </div>
+                                        <div className='flex justify-center items-center gap-2'>
+                                            {project.demo && <IconLink href={project.demo} icon={faUpRightFromSquare} />}
+                                            {project.github && <IconLink href={project.github} icon={faGithub} />}
+                                        </div>
                                     </div>
                                 </div>
+                                <span className='text-white text-4xl font-archivo-black uppercase mt-3'>
+                                    {project.title}
+                                </span>
                                 <section className='flex flex-wrap gap-1 pt-4'>
                                     {project.technologies.map((technology, index) => (
-                                        <span key={index}
-                                            className='inline-block text-neutral-800 bg-slate-100 text-xs font-medium rounded-full tracking-wide px-2 py-1'>
-                                            {technology}
-                                        </span>
+                                        <Chip key={index} text={technology} />
                                     ))}
                                 </section>
                             </ModalHeader>
                             <ModalBody>
-                                {project.description}
+                                <p className='text-white text-xl font-oswald opacity-90'>
+                                    {project.description}
+                                </p>
                             </ModalBody>
                             <Slideshow project={project} />
                         </>

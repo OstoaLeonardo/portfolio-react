@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { getWeather } from '../scripts/openWeather.js'
 import { WeatherWidget } from './WeatherWidget.jsx'
+import { BorderCard } from './BorderCard.jsx'
 import useLenguage from '../hooks/useLenguage.js'
 
 export function WeatherCard() {
@@ -10,7 +11,6 @@ export function WeatherCard() {
     const { language } = useLenguage()
     const [temperature, setTemperature] = useState('')
     const [weather, setWeather] = useState('')
-    const [place, setPlace] = useState('')
     const [icon, setIcon] = useState(urlIcon + '10d@2x.png')
     const [isNight, setIsNight] = useState(false)
 
@@ -23,7 +23,6 @@ export function WeatherCard() {
 
             setTemperature(celsius + '°C')
             setWeather(data.weather[0].description)
-            setPlace(data.name + ', ' + data.sys.country)
             setIcon(urlIcon + data.weather[0].icon + '@2x.png')
             setWidget(formattedTime)
         }
@@ -44,22 +43,21 @@ export function WeatherCard() {
     const textColorClass = isNight ? 'text-slate-100' : 'text-slate-700'
 
     return (
-        <div className='relative flex items-center col-span-2 md:aspect-auto rounded-2xl sm:rounded-3xl overflow-hidden bg-slate-700 dark:bg-slate-900'>
-            <WeatherWidget isNight={isNight} />
-            <div className='absolute flex flex-col p-4 sm:p-6 md:p-10 md:gap-1 z-50'>
-                <div className='flex flex-row items-center gap-1'>
-                    <p className={`text-3xl xl:text-7xl md:text-5xl sm:text-4xl font-bold ${textColorClass}`}>
-                        {temperature}
-                    </p>
-                    <img className='w-10 h-10 xl:w-24 xl:h-24' src={icon} alt='weather icon' />
+        <BorderCard size='medium'>
+            <div className='w-full h-full flex items-center'>
+                <WeatherWidget isNight={isNight} />
+                <div className='absolute flex flex-col p-4 sm:p-6 md:p-10 md:gap-1 z-50'>
+                    <div className='flex flex-row items-center gap-1'>
+                        <span className={`text-3xl sm:text-4xl md:text-5xl xl:text-8xl font-archivo-black  ${textColorClass}`}>
+                            {temperature}
+                        </span>
+                        <img className='w-10 h-10 xl:w-24 xl:h-24' src={icon} alt='weather icon' />
+                    </div>
+                    <span className={`text-sm sm:text-xl md:text-xl xl:text-3xl font-oswald uppercase ${textColorClass}`}>
+                        {weather}
+                    </span>
                 </div>
-                <p className={`text-sm xl:text-3xl md:text-xl sm:text-xl font-bold ${textColorClass} capitalize`}>
-                    {weather}
-                </p>
-                <p className={`hidden sm:flex text-xs xl:text-2xl md:text-lg sm:text-lg font-semibold ${textColorClass}`}>
-                    {place}
-                </p>
             </div>
-        </div>
+        </BorderCard>
     )
 }

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDiscord } from '@fortawesome/free-brands-svg-icons'
 import { getDiscordStatus } from '../scripts/discord.js'
+import { BorderCard } from './BorderCard.jsx'
 
 export function DiscordStatusCard() {
     const urlImg = 'https://cdn.discordapp.com/app-assets/'
@@ -59,28 +60,27 @@ export function DiscordStatusCard() {
     }
 
     return (
-        <div className='relative flex justify-center items-center col-span-1 aspect-square rounded-2xl sm:rounded-3xl bg-discord-light dark:bg-discord-dark'>
-            <FontAwesomeIcon
-                className='text-stone-100 text-xs sm:text-sm md:text-lg xl:text-2xl mr-1 sm:mr-2'
-                icon={faDiscord}
-            />
-            <p className='text-slate-100 font-bold text-base sm:text-2xl xl:text-3xl capitalize'>
-                {status}
-            </p>
-            <div className='absolute right-2 bottom-2 md:right-3 md:bottom-3 xl:right-4 xl:bottom-4 flex flex-row justify-center items-center'>
-                <div className='hidden md:flex flex-col justify-center items-end'>
-                    <p className='text-slate-100 font-semibold sm:text-xs md:text-xs xl:text-base'>
-                        {activity}
-                    </p>
-                    <p className='text-slate-100 font-medium sm:text-xs md:text-xs xl:text-sm'>
-                        {details}
-                    </p>
+        <BorderCard size='small' titleBorder='Discord' titleBottom={!activity && 'Discord'}>
+            <div className='w-full h-full flex justify-center items-center bg-discord-light dark:bg-discord-dark'>
+                <FontAwesomeIcon
+                    className='hidden group-hover:flex text-stone-100 text-xs sm:text-sm md:text-5xl xl:text-8xl'
+                    icon={faDiscord}
+                />
+                <span className='flex group-hover:hidden text-[3vw] font-archivo-black sm:font-outline-1 uppercase'>
+                    {status}
+                </span>
+                <div className='absolute right-2 bottom-2 md:right-3 md:bottom-3 xl:right-4 xl:bottom-4 flex flex-row justify-center items-center'>
+                    <div className='hidden md:flex flex-col justify-center items-end'>
+                        <span className='text-slate-100 sm:text-xs xl:text-sm font-oswald uppercase'>
+                            {activity}
+                        </span>
+                        <span className='text-slate-100 font-medium sm:text-xs md:text-xs xl:text-sm font-oswald opacity-70 uppercase'>
+                            {details}
+                        </span>
+                    </div>
+                    {image && <img className='h-4 w-4 md:h-8 md:w-8 xl:h-10 xl:w-10 ml-2' src={image} alt='Image Activity' />}
                 </div>
-                {image && (
-                    <img className='h-6 w-6 md:h-8 md:w-8 xl:h-10 xl:w-10 rounded-xl ml-2'
-                        src={image} alt='Image Activity' />
-                )}
             </div>
-        </div>
+        </BorderCard>
     )
 }

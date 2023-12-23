@@ -19,9 +19,9 @@ export function Slideshow({ project }) {
                 </AnimatePresence>
             ))}
 
-            <div className='absolute right-0 left-0 bottom-5 flex flex-row justify-center gap-2'>
+            <div className='absolute w-full bottom-5 flex flex-row justify-center gap-2'>
                 {project.images.map((index) => (
-                    <a key={index} className='w-2.5 h-2.5 bg-black opacity-50 rounded-full hover:opacity-100 transition-all ease-in-out duration-200' href={`#slide-${index}`} />
+                    <a key={index} className='w-2 h-2 bg-white opacity-60 hover:opacity-100 transition-all' href={`#slide-${index}`} />
                 ))}
             </div>
         </div>

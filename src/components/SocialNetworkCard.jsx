@@ -1,9 +1,11 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { fab } from '@fortawesome/free-brands-svg-icons';
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { BorderCard } from './BorderCard'
+import { IconCard } from './IconCard'
 
-library.add(fab);
+library.add(fab)
 
 export function SocialNetworkCard({ link, icon, color, label }) {
     const colorVariants = {
@@ -13,18 +15,15 @@ export function SocialNetworkCard({ link, icon, color, label }) {
     }
 
     return (
-        <a href={link} target='_blank' aria-label={label}
-            className={`relative flex flex-col justify-center items-center col-span-1 aspect-square rounded-2xl sm:rounded-3xl p-10 ${colorVariants[color]} hover:scale-105 transition-all duration-300`}>
-            <div className='absolute flex top-4 sm:top-8 right-4 sm:right-8'>
+        <BorderCard size='small' titleBorder={label.split(' ')[0]} titleBottom={label.split(' ')[0]}>
+            <a href={link} target='_blank' aria-label={label}
+                className={`w-full h-full flex justify-center items-center p-10 ${colorVariants[color]}`}>
+                <IconCard icon={faUpRightFromSquare} />
                 <FontAwesomeIcon
-                    className='text-slate-100 text-xs md:text-sm'
-                    icon={faUpRightFromSquare}
+                    className='text-slate-100 text-2xl sm:text-6xl xl:text-8xl'
+                    icon={['fab', icon]}
                 />
-            </div>
-            <FontAwesomeIcon
-                className='text-slate-100 text-2xl sm:text-6xl xl:text-8xl'
-                icon={['fab', icon]}
-            />
-        </a>
+            </a>
+        </BorderCard>
     )
 }

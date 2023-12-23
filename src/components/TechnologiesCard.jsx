@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { NextJsIcon, ExpoIcon, TailwindIcon } from './Icons.jsx'
+import { BorderCard } from './BorderCard.jsx'
 
 library.add(fab)
 
@@ -17,8 +18,8 @@ const technologies = [
 
 export function TechnologiesCard() {
     return (
-        <section className='col-span-1 bg-crayon dark:bg-slate-800 aspect-square rounded-2xl sm:rounded-3xl p-2 md:p-5'>
-            <div className='w-full h-full grid grid-cols-4 items-center place-items-center'>
+        <BorderCard size='small'>
+            <div className='w-full h-full grid grid-cols-4 items-center place-items-center bg-crayon dark:bg-slate-800 p-2 md:p-5'>
                 {technologies.map((technology, index) => (
                     <FontAwesomeIcon
                         key={index}
@@ -30,6 +31,6 @@ export function TechnologiesCard() {
                 <NextJsIcon />
                 <ExpoIcon />
             </div>
-        </section>
+        </BorderCard>
     )
 }

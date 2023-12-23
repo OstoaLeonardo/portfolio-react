@@ -1,3 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+@layer base {
+    .font-outline-1 {
+        -webkit-text-stroke: 1px white;
+        color: transparent;
+    }
+
+    .font-outline-2 {
+        -webkit-text-stroke: 2px white;
+        color: transparent;
+    }
+
+    .font-outline-4 {
+        -webkit-text-stroke: 4px white;
+        color: transparent;
+    }
+
+    .font-archivo-black {
+        font-family: 'Archivo Black', sans-serif;
+    }
+
+    .font-oswald {
+        font-family: 'Oswald', sans-serif;
+    }
+
+    .writing-vertical-lr {
+        writing-mode: vertical-lr;
+    }
+}

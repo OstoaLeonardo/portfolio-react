@@ -2,14 +2,14 @@ export const strings = {
     en: {
         aboutMeCard: {
             title: 'Hi, I\'am Duilio Ostoa',
-            about: 'Software developer from Mexico. Student of Software Engineering at the Polytechnic University of Pachuca. Passionate about technology and learn new things. Learning about web and mobile development'
+            about: 'Software Engineer and Frontend and Mobile Web Developer using ReactJS and React Native.',
         },
         yearsOldCard: {
             header: 'Age',
             footer: 'Years old'
         },
         projectsCard: {
-            title: 'My projects',
+            title: 'Projects',
         },
         githubCard: {
             title: 'My GitHub profile',
@@ -24,14 +24,14 @@ export const strings = {
     es: {
         aboutMeCard: {
             title: 'Hola, soy Duilio Ostoa',
-            about: 'Desarrollador de Software de México. Estudiante de Ingeniería de Software en la Universidad Politécnica de Pachuca. Apasionado por la tecnología y aprender cosas nuevas. Aprendiendo sobre desarrollo web y móvil'
+            about: 'Ingeniero de Software y Desarrollador Web Frontend y Mobile usando ReactJS y React Native.',
         },
         yearsOldCard: {
             header: 'Edad',
             footer: 'Años'
         },
         projectsCard: {
-            title: 'Mis proyectos',
+            title: 'Proyectos',
         },
         githubCard: {
             title: 'Mi perfil de GitHub',
