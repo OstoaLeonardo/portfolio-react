@@ -24,39 +24,33 @@ export function ProjectModal({ isOpen, onClose, project }) {
                 }}
             >
                 <ModalContent>
-                    {(onClose) => (
-                        <>
-                            <ModalHeader className='flex flex-col justify-between mt-4'>
-                                <div className='flex flex-col justify-between'>
-                                    <div className='flex flex-row justify-between items-start'>
-                                        <div className='flex flex-col'>
-                                            <span className='text-white text-base font-oswald opacity-90 uppercase'>
-                                                {project.type}
-                                            </span>
-                                        </div>
-                                        <div className='flex justify-center items-center gap-2'>
-                                            {project.demo && <IconLink href={project.demo} icon={faUpRightFromSquare} />}
-                                            {project.github && <IconLink href={project.github} icon={faGithub} />}
-                                        </div>
-                                    </div>
+                    <ModalHeader className='flex flex-col justify-between mt-4'>
+                        <div className='flex flex-col justify-between'>
+                            <div className='flex flex-row justify-between items-start'>
+                                <div className='flex flex-col'>
+                                    <span className='text-white text-base font-oswald opacity-90 uppercase'>
+                                        {project.type}
+                                    </span>
                                 </div>
-                                <span className='text-white text-4xl font-archivo-black uppercase mt-3'>
-                                    {project.title}
-                                </span>
-                                <section className='flex flex-wrap gap-1 pt-4'>
-                                    {project.technologies.map((technology, index) => (
-                                        <Chip key={index} text={technology} />
-                                    ))}
-                                </section>
-                            </ModalHeader>
-                            <ModalBody>
-                                <p className='text-white text-xl font-oswald opacity-90'>
-                                    {project.description}
-                                </p>
-                            </ModalBody>
-                            <Slideshow project={project} />
-                        </>
-                    )}
+                                <div className='flex justify-center items-center gap-2'>
+                                    {project.demo && <IconLink href={project.demo} icon={faUpRightFromSquare} />}
+                                    {project.github && <IconLink href={project.github} icon={faGithub} />}
+                                </div>
+                            </div>
+                        </div>
+                        <span className='text-white text-4xl font-archivo-black uppercase mt-3'>
+                            {project.title}
+                        </span>
+                        <section className='flex flex-wrap gap-1 pt-4'>
+                            {project.technologies.map((technology, index) => (
+                                <Chip key={index} text={technology} />
+                            ))}
+                        </section>
+                    </ModalHeader>
+                    <ModalBody className='text-white text-xl font-oswald opacity-90'>
+                        {project.description}
+                    </ModalBody>
+                    <Slideshow project={project} />
                 </ModalContent>
             </Modal>
         )
