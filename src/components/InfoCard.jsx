@@ -7,7 +7,7 @@ export function InfoCard({ header, body, footer, color }) {
     }
 
     return (
-        <BorderCard size='small'>
+        <BorderCard size='small' title={body} subtitle={footer}>
             <div className={`w-full h-full flex flex-col justify-center items-center ${colorVariants[color]}`}>
                 <header className='text-center text-xs sm:text-xs md:text-lg xl:text-2xl text-white font-oswald opacity-80 uppercase'>
                     {header}

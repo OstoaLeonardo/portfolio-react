@@ -4,7 +4,7 @@ import { BorderCard } from './BorderCard.jsx'
 import { TitleCard } from './TitleCard.jsx'
 import { IconCard } from './IconCard.jsx'
 import { strings } from '../constants/strings'
-import useLenguage from '../hooks/useLenguage.js'
+import { useLenguage } from '../hooks/useLenguage.js'
 
 export function ProjectsCard() {
     const { language } = useLenguage()
@@ -12,10 +12,10 @@ export function ProjectsCard() {
     return (
         <BorderCard
             size='medium'
+            title={strings[language].projectsCard.title}
             titleTop={strings[language].projectsCard.title}
-            titleBorder={strings[language].projectsCard.title}
         >
-            <Link to='/projects' className='w-full h-full flex flex-col bg-crayon dark:bg-slate-800 bg-projects-card bg-cover p-2 md:p-4 cursor-pointer'>
+            <Link to='/projects' className='w-full h-full flex flex-col bg-crayon dark:bg-neutral-950 bg-projects-card bg-cover p-2 md:p-4 cursor-pointer'>
                 <IconCard icon={faArrowRight} />
                 <header className='hidden group-hover:flex'>
                     <TitleCard text={strings[language].projectsCard.title} />

@@ -1,9 +1,12 @@
 import { LanguageProvider } from './context/languageContext.jsx'
+import { TitleProvider } from './context/titleContext.jsx'
 
-export function Providers({children}) {
+export function Providers({ children }) {
     return (
         <LanguageProvider>
-            {children}
+            <TitleProvider>
+                {children}
+            </TitleProvider>
         </LanguageProvider>
     )
 }

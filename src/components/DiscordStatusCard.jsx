@@ -60,21 +60,21 @@ export function DiscordStatusCard() {
     }
 
     return (
-        <BorderCard size='small' titleBorder='Discord' titleBottom={!activity && 'Discord'}>
+        <BorderCard size='small' title='Discord' subtitle={status} titleBottom={!activity && 'Discord'}>
             <div className='w-full h-full flex justify-center items-center bg-discord-light dark:bg-discord-dark'>
                 <FontAwesomeIcon
                     className='hidden group-hover:flex text-stone-100 text-xs sm:text-sm md:text-5xl xl:text-8xl'
                     icon={faDiscord}
                 />
-                <span className='flex group-hover:hidden text-[3vw] font-archivo-black sm:font-outline-1 uppercase'>
+                <span className='flex group-hover:hidden text-[2.5vw] font-archivo-black sm:font-outline-1 uppercase'>
                     {status}
                 </span>
                 <div className='absolute right-2 bottom-2 md:right-3 md:bottom-3 xl:right-4 xl:bottom-4 flex flex-row justify-center items-center'>
                     <div className='hidden md:flex flex-col justify-center items-end'>
-                        <span className='text-slate-100 sm:text-xs xl:text-sm font-oswald uppercase'>
+                        <span className='text-neutral-100 sm:text-xs xl:text-sm font-oswald uppercase'>
                             {activity}
                         </span>
-                        <span className='text-slate-100 font-medium sm:text-xs md:text-xs xl:text-sm font-oswald opacity-70 uppercase'>
+                        <span className='text-neutral-100 font-medium sm:text-xs md:text-xs xl:text-sm font-oswald opacity-70 uppercase'>
                             {details}
                         </span>
                     </div>

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { getWeather } from '../scripts/openWeather.js'
 import { WeatherWidget } from './WeatherWidget.jsx'
 import { BorderCard } from './BorderCard.jsx'
-import useLenguage from '../hooks/useLenguage.js'
+import { useLenguage } from '../hooks/useLenguage.js'
 
 export function WeatherCard() {
     const lat = '20.117'
@@ -40,10 +40,10 @@ export function WeatherCard() {
         }
     }
 
-    const textColorClass = isNight ? 'text-slate-100' : 'text-slate-700'
+    const textColorClass = isNight ? 'text-neutral-100' : 'text-neutral-900'
 
     return (
-        <BorderCard size='medium'>
+        <BorderCard size='medium' title='Weather' subtitle={temperature}>
             <div className='w-full h-full flex items-center'>
                 <WeatherWidget isNight={isNight} />
                 <div className='absolute flex flex-col p-4 sm:p-6 md:p-10 md:gap-1 z-50'>

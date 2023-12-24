@@ -32,15 +32,15 @@ export function SpotifyCard() {
     }
 
     return (
-        <BorderCard size='medium' titleBottom='Spotify' titleBorder='Spotify'>
+        <BorderCard size='medium' title='Spotify' subtitle='Recently Played' titleBottom='Spotify'>
             <div className='w-full h-full flex flex-col justify-end bg-cover bg-center p-4' style={backgroundImageStyle}>
                 <div className='hidden group-hover:flex flex-col select-none'>
                     <div className='w-fit bg-spotify px-1 md:px-2 md:py-1 max-lg:mb-0 mb-2'>
-                        <span className='text-[0.4rem] md:text-lg text-neutral-800 font-oswald uppercase'>
+                        <span className='text-[0.4rem] md:text-lg text-neutral-950 font-oswald uppercase'>
                             Recently Played
                         </span>
                     </div>
-                    
+
                     <MarqueeText classNames='max-w-full'>
                         <span className='text-white text-sm sm:text-xl md:text-2xl xl:text-7xl font-archivo-black line-clamp-1 uppercase'>
                             {recentlyPlayed.title}

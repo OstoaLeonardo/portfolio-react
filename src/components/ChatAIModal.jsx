@@ -7,7 +7,7 @@ export function ChatAIModal({ isOpen, onClose }) {
         isOpen && (
             <Modal isOpen={isOpen} onClose={onClose} size='2xl' backdrop='opaque' radius='none'
                 classNames={{
-                    closeButton: 'text-slate-100 hover:bg-neutral-900/50 rounded-none'
+                    closeButton: 'text-neutral-100 hover:bg-neutral-950/50 rounded-none'
                 }}
             >
                 <ModalContent>

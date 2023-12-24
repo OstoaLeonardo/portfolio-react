@@ -18,12 +18,12 @@ const technologies = [
 
 export function TechnologiesCard() {
     return (
-        <BorderCard size='small'>
-            <div className='w-full h-full grid grid-cols-4 items-center place-items-center bg-crayon dark:bg-slate-800 p-2 md:p-5'>
+        <BorderCard size='small' title='Tech' subtitle='nologies'>
+            <div className='w-full h-full grid grid-cols-4 items-center place-items-center bg-crayon dark:bg-neutral-950 p-2 md:p-5'>
                 {technologies.map((technology, index) => (
                     <FontAwesomeIcon
                         key={index}
-                        className='w-[85%] h-auto text-slate-600 dark:text-slate-100 aspect-square'
+                        className='w-[85%] h-auto text-neutral-600 dark:text-neutral-100 aspect-square'
                         icon={['fab', technology]}
                     />
                 ))}

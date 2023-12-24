@@ -1,7 +1,7 @@
 export const strings = {
     en: {
         aboutMeCard: {
-            title: 'Hi, I\'am Duilio Ostoa',
+            title: 'Duilio Ostoa',
             about: 'Software Engineer and Frontend and Mobile Web Developer using ReactJS and React Native.',
         },
         yearsOldCard: {
@@ -23,7 +23,7 @@ export const strings = {
     },
     es: {
         aboutMeCard: {
-            title: 'Hola, soy Duilio Ostoa',
+            title: 'Duilio Ostoa',
             about: 'Ingeniero de Software y Desarrollador Web Frontend y Mobile usando ReactJS y React Native.',
         },
         yearsOldCard: {

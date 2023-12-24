@@ -13,8 +13,8 @@ export function ChatAI() {
 
     return (
         <>
-            <BorderCard size='small' titleBorder='Chat AI'>
-                <div className='w-full h-full flex justify-center items-center bg-crayon dark:bg-slate-800 cursor-pointer'
+            <BorderCard size='small' title='Chat AI' subtitle={'\\[\'.\']/'}>
+                <div className='w-full h-full flex justify-center items-center bg-crayon dark:bg-neutral-950 cursor-pointer'
                     onClick={handleOpen}>
                     <IconCard icon={faArrowRight} />
                     <img
