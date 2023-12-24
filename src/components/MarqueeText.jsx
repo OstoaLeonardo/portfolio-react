@@ -3,7 +3,7 @@ import { Splide, SplideSlide } from '@splidejs/react-splide'
 import { AutoScroll } from '@splidejs/splide-extension-auto-scroll'
 import '@splidejs/react-splide/css'
 
-export function MarqueeText({ children, classNames, alwaysRepeat = false, direction = 'ltr' }) {
+export function MarqueeText({ children, classNames, direction = 'ltr' }) {
     const containerRef = useRef(null)
     const [isTextTooLong, setIsTextTooLong] = useState(false)
 
@@ -16,7 +16,7 @@ export function MarqueeText({ children, classNames, alwaysRepeat = false, direct
 
     return (
         <div ref={containerRef} className={classNames + ' leading-none'}>
-            {isTextTooLong || alwaysRepeat ? (
+            {isTextTooLong ? (
                 <Splide
                     aria-label='Splide'
                     options={{
@@ -27,7 +27,7 @@ export function MarqueeText({ children, classNames, alwaysRepeat = false, direct
                         autoWidth: true,
                         pagination: false,
                         direction: direction,
-                        gap: alwaysRepeat ? '1rem' : '6rem',
+                        gap: '6rem',
                         height: direction === 'ttb' && '16rem',
                         autoScroll: {
                             speed: 1,

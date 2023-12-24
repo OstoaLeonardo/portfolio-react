@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
+import { ArrowRightUpIcon } from './Icons.jsx'
 import { BorderCard } from './BorderCard.jsx'
 import { IconCard } from './IconCard'
 
@@ -23,7 +23,7 @@ export function SocialNetworkCard({ link, icon, color, label }) {
         >
             <a href={link} target='_blank' aria-label={label}
                 className={`w-full h-full flex justify-center items-center p-10 ${colorVariants[color]}`}>
-                <IconCard icon={faUpRightFromSquare} />
+                <IconCard ico={<ArrowRightUpIcon />} />
                 <FontAwesomeIcon
                     className='text-neutral-100 text-2xl sm:text-6xl xl:text-8xl'
                     icon={['fab', icon]}

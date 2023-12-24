@@ -1,8 +1,8 @@
 import { useDisclosure } from '@nextui-org/modal'
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { ChatAIModal } from './ChatAIModal.jsx'
 import { BorderCard } from './BorderCard.jsx'
 import { IconCard } from './IconCard.jsx'
+import { ScaleIcon } from './Icons.jsx'
 
 export function ChatAI() {
     const { isOpen, onOpen, onClose } = useDisclosure()
@@ -16,7 +16,7 @@ export function ChatAI() {
             <BorderCard size='small' title='Chat AI' subtitle={'\\[\'.\']/'}>
                 <div className='w-full h-full flex justify-center items-center bg-crayon dark:bg-neutral-950 cursor-pointer'
                     onClick={handleOpen}>
-                    <IconCard icon={faArrowRight} />
+                    <IconCard ico={<ScaleIcon />} />
                     <img
                         className='w-3/6 aspect-square rounded-full'
                         src='https://avatars.githubusercontent.com/u/141528763'

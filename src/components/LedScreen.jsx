@@ -10,7 +10,7 @@ export function LedScreen() {
                 <span className='text-[20vw] md:text-[9vw] font-archivo-black font-outline-2 group-hover:text-white opacity-80 break-all transition-all'>
                     {title}
                 </span>
-                <span className='hidden lg:inline-block absolute top-28 left-28 z-20 text-[9vw] text-white/80 font-archivo-black group-hover:text-white whitespace-normal leading-none transition-all'>
+                <span className='hidden lg:inline-block absolute top-28 left-28 z-20 text-[9vw] text-white/80 font-archivo-black group-hover:font-outline-2 whitespace-normal leading-none transition-all'>
                     {subtitle}
                 </span>
             </div>

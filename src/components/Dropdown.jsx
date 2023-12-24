@@ -1,45 +1,51 @@
 import { useState } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { useDarkMode } from '../hooks/useDarkMode'
 import { useLenguage } from '../hooks/useLenguage'
+import { SunAltIcon, SortIcon, SunIcon, MenuIcon } from './Icons.jsx'
 import useTitle from '../hooks/useTitle.js'
 
 export function Dropdown() {
-    const [isOpen, setIsOpen] = useState(false)
     const { setTitle, setSubtitle } = useTitle()
     const { language, toggleLanguage } = useLenguage()
     const { theme, toggleTheme } = useDarkMode()
 
-    const toggleDropdown = () => {
-        setIsOpen(!isOpen)
-        
-        if (isOpen) {
-            setTitle('Welcome')
-            setSubtitle('')
-        } else {
-            setTitle('Open')
-            setSubtitle('Settings')
-        }
+    const openDropdown = () => {
+        setTitle('Open')
+        setSubtitle('Settings')
+    }
+
+    const closeDropdown = () => {
+        setTitle('Welcome')
+        setSubtitle('')
     }
 
     return (
-        <>
-            <button onClick={toggleDropdown} className='absolute top-12 right-0 w-auto h-auto px-2 py-1 leading-none bg-white aspectd-square text-neutral-900 text-xl font-oswald uppercase'>
-                <FontAwesomeIcon icon={faBars} />
-                <span className='hidden md:inline-block pl-2'>Settings</span>
-            </button>
+        <section
+            onMouseEnter={openDropdown}
+            onMouseLeave={closeDropdown}
+            className='absolute top-12 right-0 flex flex-col items-end group'
+        >
+            <div className='w-fit bg-white aspectd-square leading-none px-2 py-1'>
+                <span className='flex items-center text-neutral-900 text-xl font-oswald uppercase gap-2'>
+                    <MenuIcon />
+                    Settings
+                </span>
+            </div>
 
-            {isOpen && (
-                <div className='absolute top-20 right-0 text-sm md:text-lg bg-white transition-all'>
-                    <button className='w-full h-auto px-10 py-1 flex items-center justify-center text-neutral-900 hover:bg-neutral-100 font-oswald uppercase' onClick={toggleTheme}>
+            <div className='hidden group-hover:flex flex-col w-36 text-sm md:text-lg bg-white transition-all'>
+                <button className='w-full flex items-center justify-between text-neutral-900 hover:bg-neutral-100 font-oswald uppercase px-2 py-1' onClick={toggleTheme}>
+                    {theme === 'dark' ? <SunAltIcon /> : <SunIcon />}
+                    <span className='pl-2'>
                         {theme === 'dark' ? 'Light' : 'Dark'} mode
-                    </button>
-                    <button className='w-full h-auto px-10 py-1 flex items-center justify-center text-neutral-900 hover:bg-neutral-100 font-oswald uppercase' onClick={toggleLanguage}>
+                    </span>
+                </button>
+                <button className='w-full flex items-center justify-between text-neutral-900 hover:bg-neutral-100 font-oswald uppercase px-2 py-1 ' onClick={toggleLanguage}>
+                    <SortIcon />
+                    <span className='pl-2'>
                         {language === 'en' ? 'Español' : 'English'}
-                    </button>
-                </div>
-            )}
-        </>
+                    </span>
+                </button>
+            </div>
+        </section>
     )
 }

@@ -44,7 +44,7 @@ export function WeatherCard() {
 
     return (
         <BorderCard size='medium' title='Weather' subtitle={temperature}>
-            <div className='w-full h-full flex items-center'>
+            <div className='relative w-full h-full flex items-center'>
                 <WeatherWidget isNight={isNight} />
                 <div className='absolute flex flex-col p-4 sm:p-6 md:p-10 md:gap-1 z-50'>
                     <div className='flex flex-row items-center gap-1'>

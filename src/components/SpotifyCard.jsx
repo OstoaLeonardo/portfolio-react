@@ -41,8 +41,8 @@ export function SpotifyCard() {
                         </span>
                     </div>
 
-                    <MarqueeText classNames='max-w-full'>
-                        <span className='text-white text-sm sm:text-xl md:text-2xl xl:text-7xl font-archivo-black line-clamp-1 uppercase'>
+                    <MarqueeText>
+                        <span className='text-white text-sm sm:text-xl md:text-2xl xl:text-7xl font-archivo-black whitespace-nowrap line-clamp-11 uppercase'>
                             {recentlyPlayed.title}
                         </span>
                     </MarqueeText>

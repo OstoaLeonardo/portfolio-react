@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
-import { faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 import { retrieveContributionData } from '../scripts/github.js'
-import { strings } from '../constants/strings.js'
 import { BorderCard } from './BorderCard.jsx'
 import { TitleCard } from './TitleCard.jsx'
 import { IconCard } from './IconCard.jsx'
+import { ArrowRightUpIcon } from './Icons.jsx'
+import { strings } from '../constants/strings.js'
 import { useLenguage } from '../hooks/useLenguage.js'
 
 export function GitHubCard() {
@@ -39,7 +39,7 @@ export function GitHubCard() {
         <BorderCard size='medium' title='GitHub' subtitle='Profile' titleTop='GitHub'>
             <a href='https://github.com/ostoaleonardo' target='_blank' aria-label='GitHub profile'
                 className='w-full h-full flex flex-col justify-between bg-github max-lg:bg-github-card bg-cover p-2 md:p-4'>
-                <IconCard icon={faUpRightFromSquare} />
+                <IconCard ico={<ArrowRightUpIcon />} />
                 <header className='opacity-0 group-hover:opacity-100'>
                     <TitleCard text='GitHub' />
                 </header>
