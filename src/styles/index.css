@@ -32,4 +32,21 @@
     .writing-vertical-lr {
         writing-mode: vertical-lr;
     }
+
+    .cursor {
+        position: fixed;
+        width: 2rem;
+        height: 2rem;
+        border-width: 3px;
+        pointer-events: none;
+        border-color: white;
+        transform: translate(-50%, -50%);
+    }
+
+    .light-bar {
+        position: fixed;
+        width: 24rem;
+        height: 120%;
+        transform: translate(-50%);
+    }
 }
