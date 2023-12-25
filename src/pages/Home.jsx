@@ -1,7 +1,4 @@
-import { Transition } from '../components/Transition.jsx'
-import { LedScreen } from '../components/LedScreen.jsx'
-import { Carousel } from '../components/Carousel.jsx'
-import { Cursor } from '../components/Cursor.jsx'
+import { Carousel, Cursor, LedScreen, Transition } from '../components'
 import '@splidejs/react-splide/css'
 
 const Home = () => {

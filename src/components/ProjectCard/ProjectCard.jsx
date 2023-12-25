@@ -1,7 +1,7 @@
 import { useDisclosure } from '@nextui-org/modal'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
-import { ProjectModal } from './ProjectModal.jsx'
+import { ProjectModal } from '../Modals'
 import { IconLink } from './IconLink.jsx'
 import { Chip } from './Chip.jsx'
 

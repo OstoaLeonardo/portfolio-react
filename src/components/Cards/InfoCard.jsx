@@ -1,4 +1,4 @@
-import { BorderCard } from './BorderCard.jsx'
+import { BorderCard } from '../Card'
 
 export function InfoCard({ header, body, footer, color }) {
     const colorVariants = {

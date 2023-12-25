@@ -36,7 +36,7 @@ const fetchData = async (accessToken, endPoint) => {
     return response.json();
 };
 
-export const getRecentlyPlayedItem = async () => {
+export const getRecentlyPlayed = async () => {
     try {
         const { access_token } = await getAccessToken();
         const song = await fetchData(access_token, recentlyPlayedEndPoint);

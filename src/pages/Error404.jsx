@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Transition } from '../components/Transition.jsx'
+import { Transition } from '../components'
 
 const Error = () => {
     return (

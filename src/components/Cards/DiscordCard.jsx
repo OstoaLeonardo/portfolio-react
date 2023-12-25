@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDiscord } from '@fortawesome/free-brands-svg-icons'
-import { getDiscordStatus } from '../scripts/discord.js'
-import { BorderCard } from './BorderCard.jsx'
+import { getDiscordStatus } from '../../scripts'
+import { BorderCard } from '../Card'
 
-export function DiscordStatusCard() {
+export function DiscordCard() {
     const urlImg = 'https://cdn.discordapp.com/app-assets/'
     const urlImgSpotify = 'https://developer.spotify.com/images/guidelines/design/icon3@2x.png'
     const urlGif = 'https://www.icegif.com/wp-content/uploads/2021/10/icegif-300.gif'

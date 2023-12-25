@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 import { TitleContext } from '../context/titleContext.jsx'
 
-export default function useTitle() {
+export function useTitle() {
     const { title, setTitle, subtitle, setSubtitle } = useContext(TitleContext)
 
     return {

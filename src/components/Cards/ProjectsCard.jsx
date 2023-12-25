@@ -1,14 +1,11 @@
 import { Link } from 'react-router-dom'
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
-import { BorderCard } from './BorderCard.jsx'
-import { TitleCard } from './TitleCard.jsx'
-import { IconCard } from './IconCard.jsx'
-import { strings } from '../constants/strings'
-import { useLenguage } from '../hooks/useLenguage.js'
-import { ArrowDownRightIcon } from './Icons.jsx'
+import { BorderCard, TitleCard, IconCard } from '../Card'
+import { useLanguage } from '../../hooks'
+import { strings } from '../../constants'
+import Icons from '../UI'
 
 export function ProjectsCard() {
-    const { language } = useLenguage()
+    const { language } = useLanguage()
 
     return (
         <BorderCard
@@ -17,7 +14,7 @@ export function ProjectsCard() {
             titleTop={strings[language].projectsCard.title}
         >
             <Link to='/projects' className='w-full h-full flex flex-col bg-slate-400 dark:bg-neutral-800 bg-projects-card bg-cover p-2 md:p-4 cursor-pointer'>
-                <IconCard ico={<ArrowDownRightIcon />} />
+                <IconCard ico={<Icons.ArrowDownRight />} />
                 <header className='hidden group-hover:flex'>
                     <TitleCard text={strings[language].projectsCard.title} />
                 </header>

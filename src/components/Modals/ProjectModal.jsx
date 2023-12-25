@@ -1,9 +1,7 @@
 import { Modal, ModalContent, ModalHeader, ModalBody } from '@nextui-org/modal'
 import { faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
-import { Slideshow } from './Slideshow.jsx'
-import { IconLink } from './IconLink.jsx'
-import { Chip } from './Chip.jsx'
+import { Slideshow, IconLink, Chip } from '../ProjectCard'
 
 export function ProjectModal({ isOpen, onClose, project }) {
     const colorVariants = {

@@ -1,16 +1,15 @@
 import { motion, AnimatePresence } from 'framer-motion'
-import '../styles/hiddenScroll.css'
 
 export function Slideshow({ project }) {
     return (
-        <div className='flex overflow-scroll snap-x snap-mandatory scroll-smooth'>
+        <div className='flex overflow-scroll snap-x snap-mandatory scroll-smooth no-scrollbar'>
             {project.images.map((image, index) => (
                 <AnimatePresence key={index}>
                     <motion.img
                         src={image}
                         alt={project.title}
                         id={`slide-${index}`}
-                        className={`sticky snap-center ${index}`}
+                        className={`sticky snap-center scroll ${index}`}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}

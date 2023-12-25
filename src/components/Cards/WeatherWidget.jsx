@@ -1,4 +1,4 @@
-import '../styles/weatherWidget.css'
+import '../../styles/weather.css'
 
 export function WeatherWidget({ isNight }) {
     const bgTime = isNight ? 'bg-[#2f3475]' : 'bg-[#98cfff]'

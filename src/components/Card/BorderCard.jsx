@@ -1,4 +1,4 @@
-import useTitle from '../hooks/useTitle.js'
+import { useTitle } from '../../hooks'
 
 export function BorderCard({ size, title, subtitle, titleTop, titleBottom, children }) {
     const { setTitle, setSubtitle } = useTitle()

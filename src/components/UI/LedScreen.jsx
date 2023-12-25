@@ -1,9 +1,9 @@
 import { Dropdown } from './Dropdown.jsx'
-import useTitle from '../hooks/useTitle.js'
+import { useTitle } from '../../hooks'
 
 export function LedScreen() {
     const { title, subtitle } = useTitle()
-    
+
     return (
         <section className='relative w-full row-span-2 uppercase select-none mix-blend-difference z-20'>
             <div className='w-full h-full max-md:flex max-md:items-center max-md:justify-center flex-col group'>

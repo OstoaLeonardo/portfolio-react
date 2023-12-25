@@ -1,9 +1,9 @@
-import { BorderCard } from './BorderCard.jsx'
-import { strings } from '../constants/strings.js'
-import { useLenguage } from '../hooks/useLenguage.js'
+import { BorderCard } from '../Card'
+import { useLanguage } from '../../hooks'
+import { strings } from '../../constants'
 
 export function AboutMeCard() {
-    const { language } = useLenguage()
+    const { language } = useLanguage()
 
     return (
         <BorderCard size='medium' title='About me' subtitle='Frontend Dev'>

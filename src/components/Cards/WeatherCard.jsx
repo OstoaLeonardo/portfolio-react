@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react'
-import { getWeather } from '../scripts/openWeather.js'
 import { WeatherWidget } from './WeatherWidget.jsx'
-import { BorderCard } from './BorderCard.jsx'
-import { useLenguage } from '../hooks/useLenguage.js'
+import { BorderCard } from '../Card'
+import { getWeather } from '../../scripts'
+import { useLanguage } from '../../hooks'
 
 export function WeatherCard() {
     const lat = '20.117'
     const lon = '-98.7333'
     const urlIcon = 'https://openweathermap.org/img/wn/'
-    const { language } = useLenguage()
+    const { language } = useLanguage()
     const [temperature, setTemperature] = useState('')
     const [weather, setWeather] = useState('')
     const [icon, setIcon] = useState(urlIcon + '10d@2x.png')

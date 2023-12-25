@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { getRecentlyPlayedItem } from '../scripts/spotify.js'
-import { MarqueeText } from './MarqueeText.jsx'
-import { BorderCard } from './BorderCard.jsx'
+import { BorderCard } from '../Card'
+import { MarqueeText } from '../UI'
+import { getRecentlyPlayed } from '../../scripts'
 
 export function SpotifyCard() {
     const [recentlyPlayed, setRecentlyPlayed] = useState({
@@ -12,7 +12,7 @@ export function SpotifyCard() {
     useEffect(() => {
         const pollNowPlaying = async () => {
             try {
-                const response = await getRecentlyPlayedItem()
+                const response = await getRecentlyPlayed()
                 if (response) {
                     setRecentlyPlayed(response)
                 }
