@@ -7,9 +7,9 @@ export function AboutMeCard() {
 
     return (
         <BorderCard size='medium' title='About me' subtitle='Frontend Dev'>
-            <div className='w-full h-full flex flex-col justify-end bg-gradient-to-r from-bright dark:from-neutral-950 to-crayon dark:to-neutral-950 p-6'>
+            <div className='w-full h-full flex flex-col justify-end bg-slate-400 dark:bg-neutral-800 p-6'>
                 <div className='flex flex-col'>
-                    <div className='w-fit bg-neutral-700 dark:bg-neutral-100 px-2 py-1 mb-4'>
+                    <div className='w-fit bg-neutral-800 dark:bg-neutral-100 px-2 py-1 mb-4'>
                         <h1 className='text-neutral-100 dark:text-neutral-950 text-3xl md:text-5xl xl:text-4xl font-archivo-black uppercase'>
                             {strings[language].aboutMeCard.title}
                         </h1>

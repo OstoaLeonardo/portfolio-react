@@ -16,7 +16,7 @@ export function ProjectsCard() {
             title={strings[language].projectsCard.title}
             titleTop={strings[language].projectsCard.title}
         >
-            <Link to='/projects' className='w-full h-full flex flex-col bg-crayon dark:bg-neutral-950 bg-projects-card bg-cover p-2 md:p-4 cursor-pointer'>
+            <Link to='/projects' className='w-full h-full flex flex-col bg-slate-400 dark:bg-neutral-800 bg-projects-card bg-cover p-2 md:p-4 cursor-pointer'>
                 <IconCard ico={<ArrowDownRightIcon />} />
                 <header className='hidden group-hover:flex'>
                     <TitleCard text={strings[language].projectsCard.title} />

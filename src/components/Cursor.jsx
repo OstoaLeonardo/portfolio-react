@@ -30,7 +30,7 @@ export function Cursor() {
 
     return (
         <>
-            <div className='cursor mix-blend-difference z-50' />
+            <div className='cursor mix-blend-difference z-[100]' />
             <div className='light-bar bg-gradient-to-b from-blue-50 from-15% to-blue-200 hidden xl:block' />
         </>
     )

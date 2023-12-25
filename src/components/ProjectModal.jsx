@@ -20,7 +20,7 @@ export function ProjectModal({ isOpen, onClose, project }) {
             <Modal isOpen={isOpen} onClose={onClose} size='xl' backdrop='opaque' radius='none' placement='center'
                 classNames={{
                     base: `${colorVariants[project.color]}`,
-                    closeButton: 'text-neutral-100 hover:bg-neutral-950/50 rounded-none',
+                    closeButton: 'text-neutral-100 hover:bg-neutral-800/50 rounded-none',
                 }}
             >
                 <ModalContent>
