@@ -1,13 +1,18 @@
 import { BorderCard } from '../Card'
+import { useLanguage } from '../../hooks'
 
-export function InfoCard({ header, body, footer, color }) {
+export function InfoCard({ header, body, footer, title, color }) {
+    const { language } = useLanguage()
     const colorVariants = {
         'purple': 'bg-purple-light dark:bg-purple-dark',
         'red': 'bg-red-light dark:bg-red-dark',
     }
 
     return (
-        <BorderCard size='small' title={body} subtitle={footer}>
+        <BorderCard
+            size='small'
+            title={title}
+        >
             <div className={`w-full h-full flex flex-col justify-center items-center ${colorVariants[color]}`}>
                 <header className='text-center text-xs sm:text-xs md:text-lg xl:text-2xl text-white font-oswald opacity-80 uppercase'>
                     {header}

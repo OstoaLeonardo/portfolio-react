@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { BorderCard } from '../Card'
 import { MarqueeText } from '../UI'
+import { strings } from '../../constants'
+import { useLanguage } from '../../hooks'
 import { getRecentlyPlayed } from '../../scripts'
 
 export function SpotifyCard() {
+    const { language } = useLanguage()
     const [recentlyPlayed, setRecentlyPlayed] = useState({
         artist: 'Loading...',
         image: 'https://i.scdn.co/image/ab67616d0000b273966ee66d723744788a24dfcc'
@@ -32,7 +35,12 @@ export function SpotifyCard() {
     }
 
     return (
-        <BorderCard size='medium' title='Spotify' subtitle='Recently Played' titleBottom='Spotify'>
+        <BorderCard
+            size='medium'
+            title='Spotify'
+            subtitle={strings[language].spotifyCard.subtitle}
+            titleBottom='Spotify'
+        >
             <div className='w-full h-full flex flex-col justify-end bg-cover bg-center p-4' style={backgroundImageStyle}>
                 <div className='hidden group-hover:flex flex-col select-none'>
                     <div className='w-fit bg-spotify px-1 md:px-2 md:py-1 max-lg:mb-0 mb-2'>

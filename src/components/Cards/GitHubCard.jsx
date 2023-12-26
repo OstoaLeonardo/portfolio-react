@@ -34,7 +34,12 @@ export function GitHubCard() {
     }
 
     return (
-        <BorderCard size='medium' title='GitHub' subtitle='Profile' titleTop='GitHub'>
+        <BorderCard
+            size='medium'
+            title='GitHub'
+            subtitle={strings[language].socialCard.subtitle}
+            titleTop='GitHub'
+        >
             <a href='https://github.com/ostoaleonardo' target='_blank' aria-label='GitHub profile'
                 className='w-full h-full flex flex-col justify-between bg-github max-lg:bg-github-card bg-cover p-2 md:p-4'>
                 <IconCard ico={<Icons.ArrowRightUp />} />
@@ -64,7 +69,7 @@ export function GitHubCard() {
                         })}
                     </ul>
                     <span className='flex lg:hidden text-neutral-100 text-xs sm:text-lg md:text-xl xl:text-2xl font-oswald line-clamp-1'>
-                        {strings[language].githubCard.title}
+                        GitHub
                     </span>
                 </footer>
             </a>

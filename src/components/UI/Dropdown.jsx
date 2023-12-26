@@ -1,4 +1,5 @@
 import { useDarkMode, useLanguage, useTitle } from '../../hooks'
+import { strings } from '../../constants/strings.js'
 import Icons from './Icons.jsx'
 
 export function Dropdown() {
@@ -12,7 +13,7 @@ export function Dropdown() {
     }
 
     const closeDropdown = () => {
-        setTitle('Welcome')
+        setTitle(strings[language].ledScreen.title)
         setSubtitle('')
     }
 
@@ -25,7 +26,7 @@ export function Dropdown() {
             <div className='w-fit bg-white aspectd-square leading-none px-2 py-1'>
                 <span className='flex items-center text-neutral-900 text-xl font-oswald uppercase gap-2'>
                     <Icons.Menu />
-                    Settings
+                    {strings[language].dropdown.title}
                 </span>
             </div>
 
@@ -33,7 +34,7 @@ export function Dropdown() {
                 <button className='w-full flex items-center justify-between text-neutral-900 hover:bg-neutral-100 font-oswald uppercase px-2 py-1' onClick={toggleTheme}>
                     {theme === 'dark' ? <Icons.SunAlt /> : <Icons.Sun />}
                     <span className='pl-2'>
-                        {theme === 'dark' ? 'Light' : 'Dark'} mode
+                        {theme === 'dark' ? strings[language].dropdown.lightMode : strings[language].dropdown.darkMode}
                     </span>
                 </button>
                 <button className='w-full flex items-center justify-between text-neutral-900 hover:bg-neutral-100 font-oswald uppercase px-2 py-1 ' onClick={toggleLanguage}>

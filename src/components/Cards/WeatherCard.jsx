@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { WeatherWidget } from './WeatherWidget.jsx'
 import { BorderCard } from '../Card'
-import { getWeather } from '../../scripts'
 import { useLanguage } from '../../hooks'
+import { strings } from '../../constants'
+import { getWeather } from '../../scripts'
 
 export function WeatherCard() {
     const lat = '20.117'
@@ -43,7 +44,11 @@ export function WeatherCard() {
     const textColorClass = isNight ? 'text-neutral-100' : 'text-neutral-900'
 
     return (
-        <BorderCard size='medium' title='Weather' subtitle={temperature}>
+        <BorderCard
+        size='medium'
+        title={strings[language].weatherCard.title}
+        subtitle={temperature}
+        >
             <div className='relative w-full h-full flex items-center'>
                 <WeatherWidget isNight={isNight} />
                 <div className='absolute flex flex-col p-4 sm:p-6 md:p-10 md:gap-1 z-50'>

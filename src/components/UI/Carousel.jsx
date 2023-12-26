@@ -21,8 +21,9 @@ export function Carousel() {
             <AboutMeCard />
             <InfoCard
                 header={strings[language].yearsOldCard.header}
-                body='21'
+                body={'21'}
                 footer={strings[language].yearsOldCard.footer}
+                title={language === 'en' ? strings[language].yearsOldCard.footer : strings[language].yearsOldCard.header}
                 color='purple'
             />
             <TechnologiesCard />
@@ -32,6 +33,7 @@ export function Carousel() {
             <InfoCard
                 body='+3'
                 footer={strings[language].experienceCard.footer}
+                title={strings[language].experienceCard.title}
                 color='red'
             />
             <SpotifyCard />
