@@ -13,7 +13,7 @@ const Error = () => {
                             found
                         </span>
                     </span>
-                    <Link to='/' className='w-fit text-xl sm:text-2xl md:text-3xl xl:text-4xl hover:scale-125 bg-neutral-100 text-neutral-950 font-archivo-black uppercase transition-all p-1'>
+                    <Link to='/' className='w-fit text-xl sm:text-2xl md:text-3xl xl:text-4xl hover:scale-125 bg-neutral-100 text-neutral-900 font-archivo-black uppercase transition-all p-1'>
                         Go back
                     </Link>
                 </div>

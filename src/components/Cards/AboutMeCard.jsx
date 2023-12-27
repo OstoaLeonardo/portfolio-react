@@ -10,7 +10,7 @@ export function AboutMeCard() {
             <div className='w-full h-full flex flex-col justify-end bg-slate-400 dark:bg-neutral-800 p-6'>
                 <div className='flex flex-col'>
                     <div className='w-fit bg-neutral-800 dark:bg-neutral-100 px-2 py-1 mb-4'>
-                        <h1 className='text-neutral-100 dark:text-neutral-950 text-3xl md:text-5xl xl:text-4xl font-archivo-black uppercase'>
+                        <h1 className='text-neutral-100 dark:text-neutral-900 text-3xl md:text-5xl xl:text-4xl font-archivo-black uppercase'>
                             Duilio Ostoa
                         </h1>
                     </div>

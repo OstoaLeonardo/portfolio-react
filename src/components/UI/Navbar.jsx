@@ -20,7 +20,7 @@ export function Navbar() {
                         target='_blank'
                         rel='noreferrer'
                         href='https://docs.google.com/document/d/1K_RaBKxsiGUQUHaNt_yg91-W8BYAfSpAQM-THx3PKgY/edit?usp=sharing'
-                        className='text-md text-neutral-950 bg-white font-oswald px-2 py-1 hover:scale-125 transition-all uppercase'>
+                        className='text-md text-neutral-900 bg-white font-oswald px-2 py-1 hover:scale-125 transition-all uppercase'>
                         Download CV
                     </a>
                 </div>

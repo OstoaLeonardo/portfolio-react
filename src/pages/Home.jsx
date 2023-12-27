@@ -5,7 +5,7 @@ const Home = () => {
     return (
         <>
             <Transition />
-            <main className='h-screen flex justify-center items-center p-6 pt-0'>
+            <main className='h-screen flex justify-center items-center overflow-hidden p-6 pt-0'>
                 <div className='mix-blend-difference w-full h-full grid grid-rows-3 grid-cols-1 grid-flow-row max-w-5xl md:max-w-5xl xl:max-w-7xl z-10'>
                     <LedScreen />
                     <Cursor />
