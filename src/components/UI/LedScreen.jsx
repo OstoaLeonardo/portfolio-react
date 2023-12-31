@@ -18,7 +18,7 @@ export function LedScreen() {
     }, [title])
 
     return (
-        <section className='relative w-full row-span-2 uppercase select-none mix-blend-difference z-20'>
+        <section className='relative w-full row-span-2 uppercase mix-blend-difference z-20'>
             <div className='w-full h-full max-md:flex max-md:items-center max-md:justify-center flex-col group'>
                 <h2 className='title text-[20vw] md:text-[9vw] font-archivo-black font-outline-2 group-hover:text-white break-all transition-all'>
                     {title}

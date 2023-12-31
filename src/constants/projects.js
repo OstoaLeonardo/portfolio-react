@@ -10,6 +10,9 @@ import portfolio2 from '../assets/images/portfolio-2.webp'
 import store1 from '../assets/images/store1.webp'
 import store2 from '../assets/images/store2.webp'
 import store3 from '../assets/images/store3.webp'
+import minecraft1 from '../assets/images/minecraft1.webp'
+import minecraft2 from '../assets/images/minecraft2.webp'
+import minecraft3 from '../assets/images/minecraft3.webp'
 
 export const projects = [
     {
@@ -65,6 +68,20 @@ export const projects = [
         demo: 'https://movies-stats.vercel.app/',
         github: 'https://github.com/ostoaleonardo/movies-stats',
         color: 'movies',
+    },
+    {
+        title: 'Minecraft Three.js',
+        type: 'Web app',
+        description: 'Based on the game Minecraft, this web app allows you to create a world with blocks and move around it.',
+        technologies: ['React', 'JavaScript', 'Three.js', 'Tailwind'],
+        images: [
+            minecraft1,
+            minecraft2,
+            minecraft3,
+        ],
+        demo: 'https://minecraft-three-js.vercel.app/',
+        github: 'https://github.com/ostoaleonardo/minecraft-three-js',
+        color: 'default',
     },
     {
         title: 'Portfolio',

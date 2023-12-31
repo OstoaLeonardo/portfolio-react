@@ -42,7 +42,7 @@ export function SpotifyCard() {
             titleBottom='Spotify'
         >
             <div className='w-full h-full flex flex-col justify-end bg-cover bg-center p-4' style={backgroundImageStyle}>
-                <div className='hidden group-hover:flex flex-col select-none'>
+                <div className='hidden group-hover:flex flex-col'>
                     <div className='w-fit bg-spotify px-1 md:px-2 md:py-1 max-lg:mb-0 mb-2'>
                         <span className='text-[0.4rem] md:text-lg text-neutral-900 font-oswald uppercase'>
                             Recently Played
