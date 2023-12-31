@@ -11,6 +11,7 @@ export function ProjectModal({ isOpen, onClose, project }) {
         'spotify': 'bg-spotify',
         'movies': 'bg-movies',
         'store': 'bg-store',
+        'default': 'bg-neutral-900',
     }
 
     return (
