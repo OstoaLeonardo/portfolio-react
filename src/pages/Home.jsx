@@ -1,4 +1,4 @@
-import { Carousel, Cursor, LedScreen, Transition } from '../components'
+import { Carousel, Cursor, Footer, LedScreen, Transition } from '../components'
 import '@splidejs/react-splide/css'
 
 const Home = () => {
@@ -12,6 +12,7 @@ const Home = () => {
                     <section className='w-full h-full flex flex-col justify-center row-span-1 bg-white/5'>
                         <Carousel />
                     </section>
+                    <Footer />
                 </div>
             </main >
         </>

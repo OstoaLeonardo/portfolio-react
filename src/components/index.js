@@ -13,7 +13,8 @@ import
     MarqueeText,
     Dropdown,
     Carousel,
-    Navbar
+    Navbar,
+    Footer
 } from './UI'
 import Icons from './UI'
 
@@ -53,6 +54,7 @@ export {
     Dropdown,
     Carousel,
     Navbar,
+    Footer,
     Icons,
 
     // Project card components

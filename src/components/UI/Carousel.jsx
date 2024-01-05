@@ -39,7 +39,6 @@ export function Carousel() {
             <SpotifyCard />
             <SocialCard link='https://www.behance.net/ostoaleonardo' icon='behance' color='behance' label='Behance profile' />
             <DiscordCard />
-            <SocialCard link='https://twitter.com/ostoaleonardo_' icon='twitter' color='twitter' label='Twitter profile' />
             <WeatherCard />
             <ChatAI />
         </div>

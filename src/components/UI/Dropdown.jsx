@@ -8,8 +8,8 @@ export function Dropdown() {
     const { theme, toggleTheme } = useDarkMode()
 
     const openDropdown = () => {
-        setTitle('Open')
-        setSubtitle('Settings')
+        setTitle(strings[language].dropdown.open)
+        setSubtitle(strings[language].dropdown.settings)
     }
 
     const closeDropdown = () => {
@@ -26,7 +26,7 @@ export function Dropdown() {
             <div className='w-fit bg-white aspectd-square leading-none px-2 py-1'>
                 <span className='flex items-center text-neutral-900 text-xl font-oswald uppercase gap-2'>
                     <Icons.Menu />
-                    {strings[language].dropdown.title}
+                    {strings[language].dropdown.settings}
                 </span>
             </div>
 

@@ -50,12 +50,12 @@ export function SpotifyCard() {
                     </div>
 
                     <MarqueeText>
-                        <span className='text-white text-sm sm:text-xl md:text-2xl xl:text-7xl font-archivo-black whitespace-nowrap line-clamp-11 uppercase'>
+                        <span className='text-white text-sm sm:text-xl md:text-2xl xl:text-7xl font-archivo-black whitespace-normal line-clamp-1 uppercase'>
                             {recentlyPlayed.title}
                         </span>
                     </MarqueeText>
                     <MarqueeText>
-                        <span className='text-white text-xs sm:text-lg md:text-xl xl:text-2xl font-oswald opacity-70 whitespace-nowrap uppercase'>
+                        <span className='text-white text-xs sm:text-lg md:text-xl xl:text-2xl font-oswald opacity-70 whitespace-normal line-clamp-1 uppercase'>
                             {recentlyPlayed.artist}
                         </span>
                     </MarqueeText>

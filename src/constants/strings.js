@@ -4,13 +4,19 @@ export const strings = {
             title: 'Welcome',
         },
         dropdown: {
-            title: 'Settings',
+            open: 'Open',
+            settings: 'Settings',
             lightMode: 'Light Mode',
             darkMode: 'Dark Mode',
         },
+        emailButton: {
+            copy: 'Copy',
+            email: 'Email',
+            copied: 'Copied',
+        },
         aboutMeCard: {
             title: 'About me',
-            about: 'Software Engineer and Frontend and Mobile Web Developer using ReactJS and React Native.',
+            about: 'Software Engineer and Frontend and Mobile Developer using ReactJS and React Native.',
         },
         yearsOldCard: {
             header: 'Age',
@@ -46,9 +52,15 @@ export const strings = {
             title: 'Bienvenido',
         },
         dropdown: {
-            title: 'Configuración',
+            open: 'Abrir',
+            settings: 'Settings',
             lightMode: 'Modo Claro',
             darkMode: 'Modo Oscuro',
+        },
+        emailButton: {
+            copy: 'Copiar',
+            email: 'Email',
+            copied: 'Copiado',
         },
         aboutMeCard: {
             title: 'Sobre mí',

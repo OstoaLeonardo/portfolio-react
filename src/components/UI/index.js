@@ -5,6 +5,7 @@ import { MarqueeText } from './MarqueeText.jsx'
 import { Dropdown } from './Dropdown.jsx'
 import { Carousel } from './Carousel.jsx'
 import { Navbar } from './Navbar.jsx'
+import { Footer } from './Footer.jsx'
 import Icons from './Icons.jsx'
 
 export {
@@ -14,7 +15,8 @@ export {
     MarqueeText,
     Dropdown,
     Carousel,
-    Navbar
+    Navbar,
+    Footer,
 }
 
 export default Icons
