@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { WeatherWidget } from './WeatherWidget.jsx'
 import { BorderCard } from '../Card'
-import { useLanguage } from '../../hooks'
-import { strings } from '../../constants'
+import { useLanguage, useStrings } from '../../hooks'
 import { getWeather } from '../../scripts'
 
 export function WeatherCard() {
     const lat = '20.117'
     const lon = '-98.7333'
     const urlIcon = 'https://openweathermap.org/img/wn/'
+    const { strings } = useStrings()
     const { language } = useLanguage()
     const [temperature, setTemperature] = useState('')
     const [weather, setWeather] = useState('')
@@ -45,9 +45,9 @@ export function WeatherCard() {
 
     return (
         <BorderCard
-        size='medium'
-        title={strings[language].weatherCard.title}
-        subtitle={temperature}
+            size='medium'
+            title={strings.weatherCard.title}
+            subtitle={temperature}
         >
             <div className='relative w-full h-full flex items-center'>
                 <WeatherWidget isNight={isNight} />

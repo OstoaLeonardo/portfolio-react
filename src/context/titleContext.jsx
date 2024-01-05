@@ -1,12 +1,11 @@
 import { createContext, useState } from 'react'
-import { useLanguage } from '../hooks'
-import { strings } from '../constants'
+import { useStrings } from '../hooks'
 
 export const TitleContext = createContext()
 
 export const TitleProvider = ({ children }) => {
-    const { language } = useLanguage()
-    const [title, setTitle] = useState(strings[language].ledScreen.title)
+    const { strings } = useStrings()
+    const [title, setTitle] = useState(strings.ledScreen.title)
     const [subtitle, setSubtitle] = useState('')
 
     return (

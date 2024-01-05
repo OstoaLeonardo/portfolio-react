@@ -1,8 +1,7 @@
-import { strings } from '../../constants'
-import { useLanguage, useTitle } from '../../hooks'
+import { useStrings, useTitle } from '../../hooks'
 
 export function BorderCard({ size, title, subtitle, titleTop, titleBottom, children }) {
-    const { language } = useLanguage()
+    const { strings } = useStrings()
     const { setTitle, setSubtitle } = useTitle()
 
     const sizeVariants = {
@@ -11,12 +10,12 @@ export function BorderCard({ size, title, subtitle, titleTop, titleBottom, child
     }
 
     const handleMouseEnter = () => {
-        setTitle(title || titleTop || titleBottom || strings[language].ledScreen.title)
+        setTitle(title || titleTop || titleBottom || strings.ledScreen.title)
         setSubtitle(subtitle || '')
     }
 
     const handleMouseLeave = () => {
-        setTitle(strings[language].ledScreen.title)
+        setTitle(strings.ledScreen.title)
         setSubtitle('')
     }
 

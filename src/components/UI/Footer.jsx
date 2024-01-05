@@ -1,24 +1,23 @@
-import { strings } from '../../constants'
-import { useLanguage, useTitle } from '../../hooks'
+import { useTitle, useStrings } from '../../hooks'
 import Icons from './Icons.jsx'
 
 export function Footer() {
     const { setTitle, setSubtitle } = useTitle()
-    const { language } = useLanguage()
+    const { strings } = useStrings()
 
     const handleMouseEnter = () => {
-        setTitle(strings[language].emailButton.copy)
-        setSubtitle(strings[language].emailButton.email)
+        setTitle(strings.emailButton.copy)
+        setSubtitle(strings.emailButton.email)
     }
 
     const handleMouseLeave = () => {
-        setTitle(strings[language].ledScreen.title)
+        setTitle(strings.ledScreen.title)
         setSubtitle('')
     }
 
     const handleCopy = () => {
         navigator.clipboard.writeText('ostoaleonardo.dev@gmail.com')
-        setTitle(strings[language].emailButton.copied)
+        setTitle(strings.emailButton.copied)
         setSubtitle('')
     }
 

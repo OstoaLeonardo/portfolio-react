@@ -1,19 +1,19 @@
-import { useDarkMode, useLanguage, useTitle } from '../../hooks'
-import { strings } from '../../constants/strings.js'
+import { useDarkMode, useLanguage, useStrings, useTitle } from '../../hooks'
 import Icons from './Icons.jsx'
 
 export function Dropdown() {
     const { setTitle, setSubtitle } = useTitle()
     const { language, toggleLanguage } = useLanguage()
+    const { strings } = useStrings()
     const { theme, toggleTheme } = useDarkMode()
 
     const openDropdown = () => {
-        setTitle(strings[language].dropdown.open)
-        setSubtitle(strings[language].dropdown.settings)
+        setTitle(strings.dropdown.open)
+        setSubtitle(strings.dropdown.settings)
     }
 
     const closeDropdown = () => {
-        setTitle(strings[language].ledScreen.title)
+        setTitle(strings.ledScreen.title)
         setSubtitle('')
     }
 
@@ -26,7 +26,7 @@ export function Dropdown() {
             <div className='w-fit bg-white aspectd-square leading-none px-2 py-1'>
                 <span className='flex items-center text-neutral-900 text-xl font-oswald uppercase gap-2'>
                     <Icons.Menu />
-                    {strings[language].dropdown.settings}
+                    {strings.dropdown.settings}
                 </span>
             </div>
 
@@ -34,7 +34,7 @@ export function Dropdown() {
                 <button className='w-full flex items-center justify-between text-neutral-900 hover:bg-neutral-100 font-oswald uppercase px-2 py-1' onClick={toggleTheme}>
                     {theme === 'dark' ? <Icons.SunAlt /> : <Icons.Sun />}
                     <span className='pl-2'>
-                        {theme === 'dark' ? strings[language].dropdown.lightMode : strings[language].dropdown.darkMode}
+                        {theme === 'dark' ? strings.dropdown.lightMode : strings.dropdown.darkMode}
                     </span>
                 </button>
                 <button className='w-full flex items-center justify-between text-neutral-900 hover:bg-neutral-100 font-oswald uppercase px-2 py-1 ' onClick={toggleLanguage}>

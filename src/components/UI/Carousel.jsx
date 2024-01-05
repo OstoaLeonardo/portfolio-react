@@ -10,20 +10,20 @@ import {
     WeatherCard,
     ChatAI
 } from '../Cards'
-import { strings } from '../../constants'
-import { useLanguage } from '../../hooks'
+import { useLanguage, useStrings } from '../../hooks'
 
 export function Carousel() {
+    const { strings } = useStrings()
     const { language } = useLanguage()
 
     return (
         <div className='h-full flex flex-row overflow-x-scroll overflow-y-hidden scrollbar-hide'>
             <AboutMeCard />
             <InfoCard
-                header={strings[language].yearsOldCard.header}
+                header={strings.yearsOldCard.header}
                 body={'21'}
-                footer={strings[language].yearsOldCard.footer}
-                title={language === 'en' ? strings[language].yearsOldCard.footer : strings[language].yearsOldCard.header}
+                footer={strings.yearsOldCard.footer}
+                title={language === 'en' ? strings.yearsOldCard.footer : strings.yearsOldCard.header}
                 color='purple'
             />
             <TechnologiesCard />
@@ -32,8 +32,8 @@ export function Carousel() {
             <GitHubCard />
             <InfoCard
                 body='+3'
-                footer={strings[language].experienceCard.footer}
-                title={strings[language].experienceCard.title}
+                footer={strings.experienceCard.footer}
+                title={strings.experienceCard.title}
                 color='red'
             />
             <SpotifyCard />

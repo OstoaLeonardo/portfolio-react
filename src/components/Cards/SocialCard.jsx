@@ -2,14 +2,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { BorderCard, IconCard } from '../Card'
-import { useLanguage } from '../../hooks'
-import { strings } from '../../constants'
+import { useStrings } from '../../hooks'
 import Icons from '../UI'
 
 library.add(fab)
 
 export function SocialCard({ link, icon, color, label }) {
-    const { language } = useLanguage()
+    const { strings } = useStrings()
     const colorVariants = {
         'linkedin': 'bg-linkedin-light dark:bg-linkedin-dark',
         'behance': 'bg-behance-light dark:bg-behance-dark',
@@ -20,7 +19,7 @@ export function SocialCard({ link, icon, color, label }) {
         <BorderCard
             size='small'
             title={label.split(' ')[0]}
-            subtitle={strings[language].socialCard.subtitle}
+            subtitle={strings.socialCard.subtitle}
             titleBottom={label.split(' ')[0]}
         >
             <a href={link} target='_blank' aria-label={label}

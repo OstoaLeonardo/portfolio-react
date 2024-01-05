@@ -1,12 +1,11 @@
 import { useEffect, useState } from 'react'
 import { BorderCard, TitleCard, IconCard } from '../Card'
 import { retrieveContributionData } from '../../scripts'
-import { useLanguage } from '../../hooks'
-import { strings } from '../../constants'
+import { useStrings } from '../../hooks'
 import Icons from '../UI'
 
 export function GitHubCard() {
-    const { language } = useLanguage()
+    const { strings } = useStrings()
     const [contributions, setContributions] = useState([])
 
     useEffect(() => {
@@ -37,7 +36,7 @@ export function GitHubCard() {
         <BorderCard
             size='medium'
             title='GitHub'
-            subtitle={strings[language].socialCard.subtitle}
+            subtitle={strings.socialCard.subtitle}
             titleTop='GitHub'
         >
             <a href='https://github.com/ostoaleonardo' target='_blank' aria-label='GitHub profile'

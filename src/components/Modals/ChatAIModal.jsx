@@ -1,10 +1,9 @@
 import { Modal, ModalContent, ModalHeader } from '@nextui-org/modal'
 import { MendableInPlace } from '@mendable/search'
-import { useLanguage } from '../../hooks'
-import { strings } from '../../constants'
+import { useStrings } from '../../hooks'
 
 export function ChatAIModal({ isOpen, onClose }) {
-    const { language } = useLanguage()
+    const { strings } = useStrings()
 
     return (
         isOpen && (
@@ -16,7 +15,7 @@ export function ChatAIModal({ isOpen, onClose }) {
             >
                 <ModalContent>
                     <ModalHeader className='text-2xl sm:text-4xl font-archivo-black uppercase'>
-                        {strings[language].chatAIModal.title}
+                        {strings.chatAIModal.title}
                     </ModalHeader>
                     <MendableInPlace
                         anon_key='fd8063a7-7e04-4913-815c-e7743f2b3209'
