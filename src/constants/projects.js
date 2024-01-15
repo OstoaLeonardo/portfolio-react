@@ -1,46 +1,48 @@
-import prefer1 from '../assets/images/would-u-rather-1.webp'
-import prefer2 from '../assets/images/would-u-rather-2.webp'
-import prefer3 from '../assets/images/would-u-rather-3.webp'
-import spotify1 from '../assets/images/spotify-stats-1.webp'
-import spotify2 from '../assets/images/spotify-stats-2.webp'
+import tailtools1 from '../assets/images/tailtools1.webp'
+import tailtools2 from '../assets/images/tailtools2.webp'
+import tailtools3 from '../assets/images/tailtools3.webp'
+import tailtools4 from '../assets/images/tailtools4.webp'
+import wavestify1 from '../assets/images/wavestify1.webp'
+import wavestify2 from '../assets/images/wavestify2.webp'
 import movies1 from '../assets/images/movies-stats-1.webp'
 import movies2 from '../assets/images/movies-stats-2.webp'
-import portfolio1 from '../assets/images/portfolio-1.webp'
-import portfolio2 from '../assets/images/portfolio-2.webp'
 import store1 from '../assets/images/store1.webp'
 import store2 from '../assets/images/store2.webp'
 import store3 from '../assets/images/store3.webp'
 import minecraft1 from '../assets/images/minecraft1.webp'
 import minecraft2 from '../assets/images/minecraft2.webp'
 import minecraft3 from '../assets/images/minecraft3.webp'
+import prefer1 from '../assets/images/would-u-rather-1.webp'
+import prefer2 from '../assets/images/would-u-rather-2.webp'
+import prefer3 from '../assets/images/would-u-rather-3.webp'
 
 export const projects = [
     {
-        title: '¿Qué prefieres?',
+        title: 'Tailtools',
         type: 'Web app',
-        description: 'A game of questions about what you prefer between two options.',
+        description: 'A web app that you can use to generate color palettes, gradients, and more for Tailwind CSS.',
         images: [
-            prefer1,
-            prefer2,
-            prefer3,
+            tailtools1,
+            tailtools2,
+            tailtools3,
+            tailtools4,
         ],
-        technologies: ['React', 'JavaScript', 'Tailwind', 'Firebase', 'Framer Motion'],
-        demo: 'https://wudu.vercel.app/',
-        github: 'https://github.com/ostoaleonardo/would-u-rather',
-        color: 'prefer',
+        technologies: ['React', 'TypeScript', 'Tailwind', 'NextUI'],
+        github: 'https://github.com/ostoaleonardo/tailtools',
+        color: 'bg-zinc-900'
     },
     {
         title: 'Wavestify',
         type: 'Web app',
         description: 'A web app that shows your Spotify stats.',
         images: [
-            spotify1,
-            spotify2,
+            wavestify1,
+            wavestify2,
         ],
         technologies: ['React', 'JavaScript', 'NextUI', 'Tailwind', 'Framer Motion'],
         demo: 'https://wavestify.vercel.app/',
         github: 'https://github.com/ostoaleonardo/spotify-stats',
-        color: 'spotify',
+        color: 'bg-spotify',
     },
     {
         title: 'E-commerce',
@@ -54,7 +56,7 @@ export const projects = [
         ],
         demo: 'https://storecommerce.vercel.app/',
         github: 'https://github.com/ostoaleonardo/store-e-commerce',
-        color: 'store',
+        color: 'bg-purple-500',
     },
     {
         title: 'Movies Stats',
@@ -67,7 +69,7 @@ export const projects = [
         ],
         demo: 'https://movies-stats.vercel.app/',
         github: 'https://github.com/ostoaleonardo/movies-stats',
-        color: 'movies',
+        color: 'bg-[#f31260]',
     },
     {
         title: 'Minecraft Three.js',
@@ -81,18 +83,20 @@ export const projects = [
         ],
         demo: 'https://minecraft-three-js.vercel.app/',
         github: 'https://github.com/ostoaleonardo/minecraft-three-js',
-        color: 'default',
+        color: 'bg-zinc-900',
     },
-    {
-        title: 'Portfolio',
-        type: 'Web app',
-        description: 'A portfolio of my projects and skills in web and mobile development.',
-        images: [
-            portfolio1,
-            portfolio2,
-        ],
-        technologies: ['React', 'JavaScript', 'Tailwind', 'Framer Motion'],
-        github: 'https://github.com/ostoaleonardo/portfolio-react',
-        color: 'portfolio',
-    }
+    // {
+    //     title: '¿Qué prefieres?',
+    //     type: 'Web app',
+    //     description: 'A game of questions about what you prefer between two options.',
+    //     images: [
+    //         prefer1,
+    //         prefer2,
+    //         prefer3,
+    //     ],
+    //     technologies: ['React', 'JavaScript', 'Tailwind', 'Firebase', 'Framer Motion'],
+    //     demo: 'https://wudu.vercel.app/',
+    //     github: 'https://github.com/ostoaleonardo/would-u-rather',
+    //     color: 'bg-[#ff475a]',
+    // },
 ]

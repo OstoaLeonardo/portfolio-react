@@ -4,21 +4,11 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { Slideshow, IconLink, Chip } from '../ProjectCard'
 
 export function ProjectModal({ isOpen, onClose, project }) {
-    const colorVariants = {
-        'dadu': 'bg-dadu',
-        'prefer': 'bg-prefer',
-        'portfolio': 'bg-portfolio',
-        'spotify': 'bg-spotify',
-        'movies': 'bg-movies',
-        'store': 'bg-store',
-        'default': 'bg-neutral-900',
-    }
-
     return (
         isOpen && (
             <Modal isOpen={isOpen} onClose={onClose} size='xl' backdrop='opaque' radius='none' placement='center'
                 classNames={{
-                    base: `${colorVariants[project.color]}`,
+                    base: project.color,
                     closeButton: 'text-neutral-100 hover:bg-neutral-800/50 rounded-none',
                 }}
             >

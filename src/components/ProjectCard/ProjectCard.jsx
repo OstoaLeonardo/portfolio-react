@@ -8,23 +8,13 @@ import { Chip } from './Chip.jsx'
 export function ProjectCard({ project }) {
     const { isOpen, onOpen, onClose } = useDisclosure()
 
-    const colorVariants = {
-        'dadu': 'bg-dadu',
-        'prefer': 'bg-prefer',
-        'portfolio': 'bg-portfolio',
-        'spotify': 'bg-spotify',
-        'movies': 'bg-movies',
-        'store': 'bg-store',
-        'default': 'bg-neutral-900'
-    }
-
-    const handleOpen = () => {
-        onOpen()
-    }
+    const handleOpen = () => onOpen()
 
     return (
-        <article className={`w-full h-full flex flex-col justify-between cursor-pointer ${colorVariants[project.color]}`}
-            onClick={handleOpen}>
+        <article
+            onClick={handleOpen}
+            className={`w-full h-full flex flex-col justify-between cursor-pointer ${project.color}`}
+        >
             <div className='flex flex-col p-6'>
                 <div className='flex flex-row justify-between'>
                     <div className='flex flex-col'>
